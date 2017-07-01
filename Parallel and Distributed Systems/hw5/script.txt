@@ -1,0 +1,12 @@
+# Scale font and line width (dpi) by changing the size! It will always display stretched.
+set terminal png size 300,250
+set output "exec_time.png"
+
+# Key means label...
+set key inside bottom right
+set xlabel 'Array Size'
+set ylabel 'time in ms'
+set title "Exec times"
+plot  exec_time_quick_sort.txt using 1:2 title quick_sort with lines
+,     exec_time_even_odd_sort.txt using 1:3 title even_odd_sort with lines
+,     exec_time_shell_sort.txt using 1:4 title shell_sort with lines

@@ -1,0 +1,10 @@
+# Scale font and line width (dpi) by changing the size! It will always display stretched.
+set terminal png size 600,600 enhanced font "Helvetica"
+set output "speedup.png"
+
+# Key means label...
+set key inside bottom right
+set xlabel 'num threads'
+set ylabel 'time in microseconds'
+set title "speedup"
+plot  "data8sp.log" using 1:2 title '2\^8' with lines,"data10sp.log" using 1:2 title '2\^10' with lines,"data12sp.log" using 1:2 title '2\^12' with lines,"data14sp.log" using 1:2 title '2\^14' with lines,"data16sp.log" using 1:2 title '2\^16' with lines,     "data18sp.log" using 1:2 title '2\^18' with lines
