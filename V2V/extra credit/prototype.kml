@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<!-- 
+
+TimeStamp is recommended for Point.
+
+Each Point represents a sample from a GPS.
+
+-->
+
+  <Document>
+    <name>Points with TimeStamps</name>
+	<Style id="sn_cabs2">
+		<IconStyle>
+			<color>ffff0000</color>
+			<scale>0.7</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		 <PolyStyle>
+			<color>37B45014</color>
+			<fill>1</fill>
+			<outline>1</outline>
+		</PolyStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+
+	<Style id="sh_cabs2">
+		<IconStyle>
+			<color>ffff0000</color>
+			<scale>0.816667</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+		 <PolyStyle>
+			<color>37B45014</color>
+			<fill>1</fill>
+			<outline>1</outline>
+		</PolyStyle>
+	</Style>
+	
+	<StyleMap id="msn_cabs2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs2</styleUrl>
+		</Pair>
+	</StyleMap>
+
+	<Style id="sh_cabs1">
+		<IconStyle>
+			<color>ff00ff00</color>
+			<scale>0.7</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		 <PolyStyle>
+			<color>3714F050</color>
+			<fill>1</fill>
+			<outline>1</outline>
+		</PolyStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+
+	<Style id="sn_cabs1">
+		<IconStyle>
+			<color>ff00ff00</color>
+			<scale>0.7</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		 <PolyStyle>
+			<color>3714F050</color>
+			<fill>1</fill>
+			<outline>1</outline>
+		</PolyStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+
+    <StyleMap id="msn_cabs1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs1</styleUrl>
+		</Pair>
+	</StyleMap>
