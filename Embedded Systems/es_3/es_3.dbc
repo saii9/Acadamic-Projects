@@ -1,0 +1,59 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: N3 N2 N1
+
+
+BO_ 2 msg3: 1 N3
+ SG_ sig4 : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1 msg2: 2 N2
+ SG_ sig3 : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 0 msg1: 2 N1
+ SG_ sig2 : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ sig1 : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+
+
+EV_ lcd_2: 0 [0|0] "" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ lcd_1: 0 [0|0] "" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ switch_1: 0 [0|0] "" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+

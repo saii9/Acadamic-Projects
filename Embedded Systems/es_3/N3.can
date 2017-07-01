@@ -1,0 +1,41 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+ int R1, R2, RN2;
+ timer t1, t2; 
+ message 0x333 msg3;
+}
+
+on timer t2{
+  int val;
+  val = @switch_1;
+  if (!val) return;
+  setSignal(sig4, 1);
+  output(msg3);
+}
+
+on timer t1{
+  R1 -= RN2;
+  @lcd_1 = R1;  
+  if(R1 < 0 || R1 == 0){
+    setTimer(t2,1.400);
+  }else{
+    setTimer(t1,1.000);  
+  }
+}
+
+on message msg1{
+  R1 = this.sig1;
+  R2 = this.sig2;  
+  if (R2 == 2) return;
+  write("Message to Node 3"); 
+  RN2 = random(3) + 1;
+  @lcd_1 = R1;    
+  setTimer(t1,1.000);
+
+}

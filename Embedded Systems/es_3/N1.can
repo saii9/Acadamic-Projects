@@ -1,0 +1,68 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  int CNT2, CNT3;
+  message 0x111 msg1 ;
+  mstimer timer1; // Timer1 defined in ms    
+  mstimer timer2; // Timer2 defined in ms
+
+}
+
+on start{
+  write("Node 1 started");
+}
+
+on timer timer1{
+  output(msg1);
+}
+
+on message msg2{
+  int val;
+  write("Message from Node 2"); 
+  val = @switch_1;
+  CNT2++;
+  if (!val) return;
+  if(CNT2 < 6 || CNT3 < 6){
+    genMsg();
+  }
+}
+
+on message msg3{
+  int val;
+  write("Message from Node 3"); 
+  CNT3++;
+  val = @switch_1;
+  if (!val) return;
+  if(CNT2 < 6 || CNT3 < 6){
+    genMsg();
+  }
+}
+
+void genMsg(){
+  int  R1, R2;
+  write("Counters CNT2 : %d, CNT3 : %d", CNT2, CNT3);
+  R1 = random(20) + 1;
+  R2 = random(2) + 2;
+  setSignal(sig1, R1);
+  setSignal(sig2, R2); 
+    
+  @lcd_2 = R2;
+  setTimer(timer1,1000);
+  
+}
+
+on envVar switch_1 {  
+  int val;
+  val = getValue(this);
+  if(!val){
+    return;
+  }
+  CNT2 = 0;
+  CNT3 = 0;
+  genMsg();
+}
