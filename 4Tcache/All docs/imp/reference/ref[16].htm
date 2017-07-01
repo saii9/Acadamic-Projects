@@ -1,0 +1,1101 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- base href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.64.5685&rep=rep1&type=ps" --></head><body bgcolor="#ffffff" link="blue" vlink="blue"><div style="background:#fff;border:1px solid #999;margin:-1px -1px 0;padding:0;"><div style="background:#ddd;border:1px solid #999;color:#000;font:13px arial,sans-serif;font-weight:normal;margin:12px;padding:8px;text-align:left">This is the html version of the file <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.64.5685&amp;rep=rep1&amp;type=ps" style="text-decoration:underline;color:#00c">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.64.5685&amp;rep=rep1&amp;type=ps</a>.<br><b>Google</b> automatically generates html versions of documents as we crawl the web.</div></div><div style="position:relative">
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Producer" content="GNU Ghostscript 7.07">
+<meta name="Creator" content="dvipsk 5.58f Copyright 1986, 1994 Radical Eye Software">
+<meta name="Title" content="iccd_new.dvi">
+<title>Low Power SRAM Design using Hierarchical Divided Bit-Line Approach</title>
+
+<table border="0" width="100%"><tbody><tr><td align="right" bgcolor="eeeeee"><font face="arial,sans-serif"><a name="1"><b>Page 1</b></a></font></td></tr></tbody></table><font face="Times" size="3"><span style="font-size:19px;font-family:Times">
+<div style="position:absolute;top:330;left:115"><nobr><b style="color:black;background-color:#ffff66">Low</b> <b style="color:black;background-color:#a0ffff">Power</b> <b style="color:black;background-color:#99ff99">SRAM</b> Design <b style="color:black;background-color:#ff9999">using</b> Hierarchical Divided Bit-Line</nobr></div>
+<div style="position:absolute;top:357;left:391"><nobr>Approach</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:13px;font-family:Times">
+<div style="position:absolute;top:420;left:372"><nobr>Ashish Karandikar</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:422;left:521"><nobr>y</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:13px;font-family:Times">
+<div style="position:absolute;top:441;left:262"><nobr>Intel Corporation, Santa Clara, CA 95052, USA</nobr></div>
+<div style="position:absolute;top:462;left:310"><nobr>E-mail: akarand1@td2cad.intel.com</nobr></div>
+<div style="position:absolute;top:491;left:382"><nobr>Keshab K. Parhi</nobr></div>
+<div style="position:absolute;top:512;left:268"><nobr>Dept. of Electrical and Computer Engineering</nobr></div>
+<div style="position:absolute;top:533;left:234"><nobr>University of Minnesota, Minneapolis, MN 55455, USA</nobr></div>
+<div style="position:absolute;top:554;left:340"><nobr>E-mail: parhi@ece.umn.edu</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:15px;font-family:Times">
+<div style="position:absolute;top:615;left:214"><nobr>Abstract</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:655;left:93"><nobr>This paper presents a novel hierarchical divided bit-</nobr></div>
+<div style="position:absolute;top:673;left:75"><nobr>line approach for reducing active <b style="color:black;background-color:#a0ffff">power</b> in SRAMs by</nobr></div>
+<div style="position:absolute;top:691;left:75"><nobr>reducing bit-line capacitance. Two or more 6T <b style="color:black;background-color:#99ff99">SRAM</b></nobr></div>
+<div style="position:absolute;top:709;left:75"><nobr>cells are combined together to divide the bit-line into</nobr></div>
+<div style="position:absolute;top:727;left:75"><nobr>several sub bit-lines. These sub bit-lines are again com-</nobr></div>
+<div style="position:absolute;top:745;left:75"><nobr>bined to form two or more levels of hierarchy. This divi-</nobr></div>
+<div style="position:absolute;top:763;left:75"><nobr>sion of bit-line into hierarchical sub bit-lines results in</nobr></div>
+<div style="position:absolute;top:781;left:75"><nobr>reduction of bit-line capacitance, which reduces active</nobr></div>
+<div style="position:absolute;top:799;left:75"><nobr><b style="color:black;background-color:#a0ffff">power</b> and access time. Optimum values for number</nobr></div>
+<div style="position:absolute;top:817;left:75"><nobr>of levels of hierarchy and number of blocks combined</nobr></div>
+<div style="position:absolute;top:834;left:75"><nobr>at each level have been derived. Experimental results</nobr></div>
+<div style="position:absolute;top:852;left:75"><nobr>show that the observed parameters and estimated ones</nobr></div>
+<div style="position:absolute;top:870;left:75"><nobr>follow the same trend. It is shown that the reduction</nobr></div>
+<div style="position:absolute;top:888;left:75"><nobr>in bit-line capacitance reduces active <b style="color:black;background-color:#a0ffff">power</b> consump-</nobr></div>
+<div style="position:absolute;top:906;left:75"><nobr>tion by 50 60% and the access time by about 20% at</nobr></div>
+<div style="position:absolute;top:924;left:75"><nobr>the expense of approximately 5% increase in the num-</nobr></div>
+<div style="position:absolute;top:942;left:75"><nobr>ber of transistors. This approach is further extended</nobr></div>
+<div style="position:absolute;top:960;left:75"><nobr>by incorporating the controlled voltage swing on bit-</nobr></div>
+<div style="position:absolute;top:978;left:75"><nobr>lines. This extension reduces the <b style="color:black;background-color:#a0ffff">power</b> consumption</nobr></div>
+<div style="position:absolute;top:996;left:75"><nobr>by another 20 30%.</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:15px;font-family:Times">
+<div style="position:absolute;top:1055;left:75"><nobr>1 Introduction</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:1101;left:93"><nobr>Designing a <b style="color:black;background-color:#ffff66">low</b> <b style="color:black;background-color:#a0ffff">power</b> system not only reduces</nobr></div>
+<div style="position:absolute;top:1119;left:75"><nobr>weight and size of batteries for portable systems but</nobr></div>
+<div style="position:absolute;top:1137;left:75"><nobr>also helps in reducing the ever-important packaging</nobr></div>
+<div style="position:absolute;top:1155;left:75"><nobr>costs of integrated circuits. To this end, the design</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:1188;left:98"><nobr>This work was supported by the Defense Advanced Research</nobr></div>
+<div style="position:absolute;top:1202;left:75"><nobr>Project Agency under contract number DA/DABT63-96-C-0050.</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:7px;font-family:Times">
+<div style="position:absolute;top:1214;left:92"><nobr>y<font style="font-size:9px">This work was performed when author was with the Univer-</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:1231;left:75"><nobr>sity of Minnesota.</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:618;left:463"><nobr>of <b style="color:black;background-color:#ffff66">low</b> <b style="color:black;background-color:#a0ffff">power</b> digital systems is becoming increasingly</nobr></div>
+<div style="position:absolute;top:636;left:463"><nobr>important. With memories accounting for the largest</nobr></div>
+<div style="position:absolute;top:654;left:463"><nobr>share of <b style="color:black;background-color:#a0ffff">power</b> consumption in the processors, an em-</nobr></div>
+<div style="position:absolute;top:672;left:463"><nobr>phasis has been placed on the design of <b style="color:black;background-color:#ffff66">low</b> <b style="color:black;background-color:#a0ffff">power</b> mem-</nobr></div>
+<div style="position:absolute;top:690;left:463"><nobr>ories [4] [3] [7].</nobr></div>
+<div style="position:absolute;top:744;left:481"><nobr>As described in [4], active <b style="color:black;background-color:#a0ffff">power</b> is a major com-</nobr></div>
+<div style="position:absolute;top:762;left:463"><nobr>ponent of the total memory <b style="color:black;background-color:#a0ffff">power</b>. This paper rst</nobr></div>
+<div style="position:absolute;top:780;left:463"><nobr>describes a novel <font style="font-size:10px">divided bit-line approach </font>for reducing</nobr></div>
+<div style="position:absolute;top:798;left:463"><nobr>the active <b style="color:black;background-color:#a0ffff">power</b> by reducing the bit-line capacitance</nobr></div>
+<div style="position:absolute;top:816;left:463"><nobr>and then extends it to a <font style="font-size:10px">hierarchical </font>divided bit-line ap-</nobr></div>
+<div style="position:absolute;top:834;left:463"><nobr>proach. It is shown that by reducing this capacitance,</nobr></div>
+<div style="position:absolute;top:852;left:463"><nobr>not only <b style="color:black;background-color:#a0ffff">power</b> reduction is achieved but access time is</nobr></div>
+<div style="position:absolute;top:870;left:463"><nobr>reduced as well. While hierarchical word-decoding has</nobr></div>
+<div style="position:absolute;top:887;left:463"><nobr>been used to reduce <b style="color:black;background-color:#a0ffff">power</b> consumption by reducing</nobr></div>
+<div style="position:absolute;top:905;left:463"><nobr>the number of columns activated during a read oper-</nobr></div>
+<div style="position:absolute;top:923;left:463"><nobr>ation [9][8], this paper is the rst attempt to reduce</nobr></div>
+<div style="position:absolute;top:941;left:463"><nobr><b style="color:black;background-color:#99ff99">SRAM</b> <b style="color:black;background-color:#a0ffff">power</b> consumption by the divided bit-line con-</nobr></div>
+<div style="position:absolute;top:959;left:463"><nobr>cept. Another advantage of this approach is the sta-</nobr></div>
+<div style="position:absolute;top:977;left:463"><nobr>bility of the <b style="color:black;background-color:#99ff99">SRAM</b> cells. By dividing bit-line into sub</nobr></div>
+<div style="position:absolute;top:995;left:463"><nobr>bit-lines, <b style="color:black;background-color:#99ff99">SRAM</b> cells become more stable, as they are</nobr></div>
+<div style="position:absolute;top:1013;left:463"><nobr>guarded from the noise on bit-lines through pass tran-</nobr></div>
+<div style="position:absolute;top:1031;left:463"><nobr>sistors.</nobr></div>
+<div style="position:absolute;top:1085;left:481"><nobr>In section 2, the <font style="font-size:10px">divided bit-line </font>approach is de-</nobr></div>
+<div style="position:absolute;top:1103;left:463"><nobr>scribed and an optimum value for the number of <b style="color:black;background-color:#99ff99">SRAM</b></nobr></div>
+<div style="position:absolute;top:1121;left:463"><nobr>cells to be combined is derived. Section 3 describes</nobr></div>
+<div style="position:absolute;top:1139;left:463"><nobr>the <font style="font-size:10px">hierarchical divided bit-line </font>approach. Section 4</nobr></div>
+<div style="position:absolute;top:1156;left:463"><nobr>presents some experimental results. Section 5 presents</nobr></div>
+<div style="position:absolute;top:1174;left:463"><nobr>an extension to the proposed approach by limiting the</nobr></div>
+<div style="position:absolute;top:1192;left:463"><nobr>voltage swing on bit-lines which leads to further savings</nobr></div>
+<div style="position:absolute;top:1210;left:463"><nobr>in <b style="color:black;background-color:#a0ffff">power</b> consumption. Finally, section 6 concludes the</nobr></div>
+<div style="position:absolute;top:1228;left:463"><nobr>paper.</nobr></div>
+</span></font>
+
+<div style="position:absolute;top:1363;left:0"><hr><table border="0" width="100%"><tbody><tr><td align="right" bgcolor="eeeeee"><font face="arial,sans-serif"><a name="2"><b>Page 2</b></a></font></td></tr></tbody></table></div><font face="Times" size="3"><span style="font-size:15px;font-family:Times">
+<div style="position:absolute;top:1469;left:75"><nobr>2</nobr></div>
+<div style="position:absolute;top:1469;left:112"><nobr>Divided Bit-Line Approach</nobr></div>
+<div style="position:absolute;top:1509;left:75"><nobr>2.1 Concept</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:1550;left:93"><nobr><b style="color:black;background-color:#a0ffff">Power</b> consumption in SRAMs, for a normal read</nobr></div>
+<div style="position:absolute;top:1568;left:75"><nobr>cycle, is given by</nobr></div>
+<div style="position:absolute;top:1602;left:124"><nobr>P</nobr></div>
+<div style="position:absolute;top:1601;left:150"><nobr>= V <font style="font-size:9px">dd</font></nobr></div>
+<div style="position:absolute;top:1602;left:213"><nobr>I <font style="font-size:9px">dd</font></nobr></div>
+<div style="position:absolute;top:1601;left:410"><nobr>(1)</nobr></div>
+<div style="position:absolute;top:1624;left:116"><nobr>I <font style="font-size:9px">dd</font></nobr></div>
+<div style="position:absolute;top:1624;left:150"><nobr>= (mI <font style="font-size:9px">act </font>t + C <font style="font-size:9px">PT </font>V<font style="font-size:9px">INT </font>)f + I <font style="font-size:9px">DCP</font></nobr></div>
+<div style="position:absolute;top:1624;left:410"><nobr>(2)</nobr></div>
+<div style="position:absolute;top:1657;left:75"><nobr>where, V<font style="font-size:9px">dd </font>is an external supply voltage, I <font style="font-size:9px">dd </font>is the to-</nobr></div>
+<div style="position:absolute;top:1675;left:75"><nobr>tal current, I <font style="font-size:9px">act </font>is the e ective active current, V <font style="font-size:9px">INT</font></nobr></div>
+<div style="position:absolute;top:1693;left:75"><nobr>is an internal supply voltage, C <font style="font-size:9px">PT </font>is the total capaci-</nobr></div>
+<div style="position:absolute;top:1711;left:75"><nobr>tance of the peripheral circuits, I <font style="font-size:9px">DCP </font>is the total static</nobr></div>
+<div style="position:absolute;top:1729;left:75"><nobr>current, m is the number of columns and f is the opera-</nobr></div>
+<div style="position:absolute;top:1747;left:75"><nobr>tion frequency. This equation is based on the fact that</nobr></div>
+<div style="position:absolute;top:1765;left:75"><nobr>in SRAMs, holding current is very small [4] and de-</nobr></div>
+<div style="position:absolute;top:1783;left:75"><nobr>coder charging current is negligible because of NAND</nobr></div>
+<div style="position:absolute;top:1801;left:75"><nobr>decoders [4] [6]. To reduce the total <b style="color:black;background-color:#a0ffff">power</b> consump-</nobr></div>
+<div style="position:absolute;top:1819;left:75"><nobr>tion, active current should be reduced as it dominates</nobr></div>
+<div style="position:absolute;top:1837;left:75"><nobr>the total current. Active current is the current that</nobr></div>
+<div style="position:absolute;top:1854;left:79"><nobr>ows during word line activation, <font style="font-size:10px">i.e., </font>during charg-</nobr></div>
+<div style="position:absolute;top:1872;left:75"><nobr>ing or discharging of bit-line capacitance. This active</nobr></div>
+<div style="position:absolute;top:1890;left:75"><nobr>current is directly proportional to bit-line capacitance.</nobr></div>
+<div style="position:absolute;top:1908;left:75"><nobr>Divided word line and hierarchical word decoding ap-</nobr></div>
+<div style="position:absolute;top:1926;left:75"><nobr>proaches reduce the I <font style="font-size:9px">dd </font>by reducing the value of m,</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:10px;font-family:Times">
+<div style="position:absolute;top:1945;left:75"><nobr>i.e., <font style="font-size:11px">the number of columns activated during a read</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:1962;left:75"><nobr>operation [9][8]. Approaches involving the pulse op-</nobr></div>
+<div style="position:absolute;top:1980;left:75"><nobr>eration of word line and column circuitry reduce the</nobr></div>
+<div style="position:absolute;top:1998;left:75"><nobr>I <font style="font-size:9px">dd </font>by reducing the value of t in (2) [4]. In contrast,</nobr></div>
+<div style="position:absolute;top:2016;left:75"><nobr>the approach presented in this paper reduces I <font style="font-size:9px">dd </font>by</nobr></div>
+<div style="position:absolute;top:2034;left:75"><nobr>reducing the active current, I <font style="font-size:9px">act </font>in (2).</nobr></div>
+<div style="position:absolute;top:2052;left:93"><nobr>The total e ective charging current owing through</nobr></div>
+<div style="position:absolute;top:2070;left:75"><nobr>a bit-line, during a read operation, can be expressed as</nobr></div>
+<div style="position:absolute;top:2110;left:175"><nobr>I <font style="font-size:9px">eff </font>= C <font style="font-size:9px">eff</font></nobr></div>
+<div style="position:absolute;top:2100;left:277"><nobr>V</nobr></div>
+<div style="position:absolute;top:2120;left:281"><nobr>t</nobr></div>
+<div style="position:absolute;top:2110;left:410"><nobr>(3)</nobr></div>
+<div style="position:absolute;top:2147;left:75"><nobr>where C<font style="font-size:9px">eff </font>is the e ective bit-line capacitance, V is</nobr></div>
+<div style="position:absolute;top:2165;left:75"><nobr>the voltage swing on the bit-line and t is the word</nobr></div>
+<div style="position:absolute;top:2183;left:75"><nobr>line activation time.</nobr></div>
+<div style="position:absolute;top:2201;left:93"><nobr>Similarly, expression for <b style="color:black;background-color:#a0ffff">power</b> can be written as,</nobr></div>
+<div style="position:absolute;top:2235;left:136"><nobr>P ower = (I <font style="font-size:9px">eff</font></nobr></div>
+<div style="position:absolute;top:2235;left:269"><nobr>V</nobr></div>
+<div style="position:absolute;top:2235;left:300"><nobr>t) f</nobr></div>
+<div style="position:absolute;top:2235;left:384"><nobr>(4)</nobr></div>
+<div style="position:absolute;top:2257;left:195"><nobr>= (C <font style="font-size:9px">eff</font></nobr></div>
+<div style="position:absolute;top:2257;left:277"><nobr>V</nobr></div>
+<div style="position:absolute;top:2257;left:304"><nobr>V ) f:</nobr></div>
+<div style="position:absolute;top:2257;left:385"><nobr>(5)</nobr></div>
+<div style="position:absolute;top:2290;left:93"><nobr>If the same voltage swing is allowed, then <b style="color:black;background-color:#a0ffff">power</b></nobr></div>
+<div style="position:absolute;top:2308;left:75"><nobr>consumed during read or write is directly proportional</nobr></div>
+<div style="position:absolute;top:2326;left:75"><nobr>to the capacitance of bit-line.</nobr></div>
+<div style="position:absolute;top:2344;left:93"><nobr>The bit-line capacitance is mainly composed of the</nobr></div>
+<div style="position:absolute;top:2362;left:75"><nobr>drain capacitance of the pass transistors of the <b style="color:black;background-color:#99ff99">SRAM</b></nobr></div>
+<div style="position:absolute;top:2380;left:75"><nobr>cell and metal capacitance of bit-line. To reduce this</nobr></div>
+<div style="position:absolute;top:2398;left:75"><nobr>capacitance, drain capacitance and metal capacitance</nobr></div>
+<div style="position:absolute;top:2416;left:75"><nobr>should be reduced. Bit-line capacitance can be reduced</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:1476;left:665"><nobr>Bit -Line</nobr></div>
+<div style="position:absolute;top:1474;left:560"><nobr>Bit -Line</nobr></div>
+<div style="position:absolute;top:1544;left:679"><nobr><b style="color:white;background-color:#00aa00">Local</b>  Word Line</nobr></div>
+<div style="position:absolute;top:1602;left:676"><nobr>Global  Word  Line</nobr></div>
+<div style="position:absolute;top:1622;left:688"><nobr>Sub  Bit-Line</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:1661;left:491"><nobr>Figure 1. Divided Bit-Line Approach, M = 4</nobr></div>
+<div style="position:absolute;top:1710;left:463"><nobr>by the proposed <font style="font-size:10px">divided bit-line approach</font>, where the</nobr></div>
+<div style="position:absolute;top:1728;left:463"><nobr>number of transistors connected to the bit-line is re-</nobr></div>
+<div style="position:absolute;top:1746;left:463"><nobr>duced by combining two or more <b style="color:black;background-color:#99ff99">SRAM</b> cells. Fig. 1</nobr></div>
+<div style="position:absolute;top:1764;left:463"><nobr>shows 4 <b style="color:black;background-color:#99ff99">SRAM</b> cells combined together and connected</nobr></div>
+<div style="position:absolute;top:1782;left:463"><nobr>via one pass transistor to the bit-line. Thus, the num-</nobr></div>
+<div style="position:absolute;top:1800;left:463"><nobr>ber of pass transistors connected to the bit-line is re-</nobr></div>
+<div style="position:absolute;top:1818;left:463"><nobr>duced by 4.</nobr></div>
+<div style="position:absolute;top:1856;left:463"><nobr>2.2</nobr></div>
+<div style="position:absolute;top:1856;left:503"><nobr>Theoretical Basis</nobr></div>
+<div style="position:absolute;top:1894;left:481"><nobr>In this subsection, we provide a theoretical basis for</nobr></div>
+<div style="position:absolute;top:1912;left:463"><nobr>our approach and derive an optimal value for the num-</nobr></div>
+<div style="position:absolute;top:1930;left:463"><nobr>ber of <b style="color:black;background-color:#99ff99">SRAM</b> cells to be combined. The bounds for</nobr></div>
+<div style="position:absolute;top:1948;left:463"><nobr>signal delay in RC tree networks have been derived in</nobr></div>
+<div style="position:absolute;top:1966;left:463"><nobr>[5]. Similar bounds can be obtained for the access time</nobr></div>
+<div style="position:absolute;top:1984;left:463"><nobr>of <b style="color:black;background-color:#99ff99">SRAM</b> by modeling the pass transistors connect-</nobr></div>
+<div style="position:absolute;top:2002;left:463"><nobr>ing pull-up and pull-down transistors of the <b style="color:black;background-color:#99ff99">SRAM</b> cell</nobr></div>
+<div style="position:absolute;top:2020;left:463"><nobr>with bit-lines as resistors. Though, pass-transistors are</nobr></div>
+<div style="position:absolute;top:2038;left:463"><nobr>not always in linear region of operation, but modeling</nobr></div>
+<div style="position:absolute;top:2056;left:463"><nobr>them as resistors gives us a suitable rst order approx-</nobr></div>
+<div style="position:absolute;top:2074;left:463"><nobr>imation. Fig. 2 shows the modeling of pass-transistors</nobr></div>
+<div style="position:absolute;top:2092;left:463"><nobr>as RC chain. As bit-lines are always precharged before</nobr></div>
+<div style="position:absolute;top:2110;left:463"><nobr>reading, analysis is performed for bit line (or bit-line)</nobr></div>
+<div style="position:absolute;top:2128;left:463"><nobr>which has to be pulled down to read a ‘1’ (or a ‘0’).</nobr></div>
+<div style="position:absolute;top:2146;left:481"><nobr>By <b style="color:black;background-color:#ff9999">using</b> the equations and notations given in [5], we</nobr></div>
+<div style="position:absolute;top:2164;left:463"><nobr>can write the access time T <font style="font-size:9px">delay </font>in terms of parameters</nobr></div>
+<div style="position:absolute;top:2182;left:463"><nobr>T<font style="font-size:9px">P </font>, T<font style="font-size:9px">D</font><font style="font-size:8px">2 </font>and T<font style="font-size:9px">R</font><font style="font-size:8px">2 </font>as</nobr></div>
+<div style="position:absolute;top:2238;left:534"><nobr>T<font style="font-size:9px">D</font><font style="font-size:8px">2</font></nobr></div>
+<div style="position:absolute;top:2238;left:574"><nobr>T <font style="font-size:9px">R</font><font style="font-size:8px">2 </font>+ T <font style="font-size:9px">R</font><font style="font-size:8px">2 </font>ln</nobr></div>
+<div style="position:absolute;top:2228;left:678"><nobr>T<font style="font-size:9px">R</font><font style="font-size:8px">2</font></nobr></div>
+<div style="position:absolute;top:2248;left:665"><nobr>T<font style="font-size:9px">P </font>[v(t)]</nobr></div>
+<div style="position:absolute;top:2238;left:734"><nobr>T <font style="font-size:9px">delay</font></nobr></div>
+<div style="position:absolute;top:2278;left:546"><nobr>T <font style="font-size:9px">P</font></nobr></div>
+<div style="position:absolute;top:2278;left:583"><nobr>T <font style="font-size:9px">R</font><font style="font-size:8px">2 </font>+ T <font style="font-size:9px">P </font>ln</nobr></div>
+<div style="position:absolute;top:2268;left:681"><nobr>T<font style="font-size:9px">D</font><font style="font-size:8px">2</font></nobr></div>
+<div style="position:absolute;top:2288;left:668"><nobr>T<font style="font-size:9px">P </font>[v(t)]</nobr></div>
+<div style="position:absolute;top:2278;left:799"><nobr>(6)</nobr></div>
+<div style="position:absolute;top:2320;left:463"><nobr>where v(t) is a normalized voltage with respect to the</nobr></div>
+<div style="position:absolute;top:2338;left:463"><nobr>supply and is given by</nobr></div>
+<div style="position:absolute;top:2379;left:574"><nobr>v(t) = 1</nobr></div>
+<div style="position:absolute;top:2369;left:650"><nobr>V</nobr></div>
+<div style="position:absolute;top:2389;left:653"><nobr>V</nobr></div>
+<div style="position:absolute;top:2379;left:673"><nobr>:</nobr></div>
+<div style="position:absolute;top:2379;left:798"><nobr>(7)</nobr></div>
+<div style="position:absolute;top:2416;left:463"><nobr>The parameters T <font style="font-size:9px">P </font>, T<font style="font-size:9px">D</font><font style="font-size:8px">2 </font>, T<font style="font-size:9px">R</font><font style="font-size:8px">2 </font>are given by following</nobr></div>
+</span></font>
+
+<div style="position:absolute;top:2551;left:0"><hr><table border="0" width="100%"><tbody><tr><td align="right" bgcolor="eeeeee"><font face="arial,sans-serif"><a name="3"><b>Page 3</b></a></font></td></tr></tbody></table></div><font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:2659;left:221"><nobr>Bit-Line</nobr></div>
+<div style="position:absolute;top:2680;left:239"><nobr>Sub Bit-Line</nobr></div>
+<div style="position:absolute;top:2771;left:208"><nobr>Global Word Line</nobr></div>
+<div style="position:absolute;top:2754;left:245"><nobr>Sub  Global Word  Line</nobr></div>
+<div style="position:absolute;top:2704;left:254"><nobr>’1’</nobr></div>
+<div style="position:absolute;top:2842;left:167"><nobr>C</nobr></div>
+<div style="position:absolute;top:2842;left:211"><nobr>C</nobr></div>
+<div style="position:absolute;top:2817;left:204"><nobr>R</nobr></div>
+<div style="position:absolute;top:2817;left:245"><nobr>R</nobr></div>
+<div style="position:absolute;top:2814;left:297"><nobr>Virtual  Gnd</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:2846;left:174"><nobr>2</nobr></div>
+<div style="position:absolute;top:2818;left:211"><nobr>2</nobr></div>
+<div style="position:absolute;top:2818;left:249"><nobr>1</nobr></div>
+<div style="position:absolute;top:2846;left:217"><nobr>1</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:2702;left:297"><nobr>Pull Down</nobr></div>
+<div style="position:absolute;top:2711;left:297"><nobr>Transistor</nobr></div>
+<div style="position:absolute;top:2711;left:172"><nobr>2</nobr></div>
+<div style="position:absolute;top:2709;left:208"><nobr>1</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:19px;font-family:Times">
+<div style="position:absolute;top:2882;left:93"><nobr>Figure 2. R-C model for Pass transistors,</nobr></div>
+<div style="position:absolute;top:2900;left:93"><nobr>reading ‘1’ stored in <b style="color:black;background-color:#99ff99">SRAM</b> cell</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:2965;left:75"><nobr>equations,</nobr></div>
+<div style="position:absolute;top:2992;left:127"><nobr>T<font style="font-size:9px">P </font>= T <font style="font-size:9px">D</font><font style="font-size:8px">2 </font>= R <font style="font-size:8px">1</font>C<font style="font-size:8px">1 </font>+ (R <font style="font-size:8px">1 </font>+ R <font style="font-size:8px">2</font>)C<font style="font-size:8px">2</font></nobr></div>
+<div style="position:absolute;top:2992;left:410"><nobr>(8)</nobr></div>
+<div style="position:absolute;top:3038;left:135"><nobr>T<font style="font-size:9px">R</font><font style="font-size:8px">2 </font>=</nobr></div>
+<div style="position:absolute;top:3028;left:191"><nobr>R<font style="font-size:8px">2</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:3035;left:202"><nobr>1<font style="font-size:11px">C</font>1</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3048;left:182"><nobr>R<font style="font-size:8px">1 </font>+ R <font style="font-size:8px">2</font></nobr></div>
+<div style="position:absolute;top:3038;left:241"><nobr>+ (R <font style="font-size:8px">1 </font>+ R <font style="font-size:8px">2</font>)C<font style="font-size:8px">2</font></nobr></div>
+<div style="position:absolute;top:3038;left:410"><nobr>(9)</nobr></div>
+<div style="position:absolute;top:3071;left:75"><nobr>where R<font style="font-size:8px">1 </font>is the resistance of the pass-transistor 1 and</nobr></div>
+<div style="position:absolute;top:3089;left:75"><nobr>R<font style="font-size:8px">2 </font>is the resistance of the pass-transistor 2. C <font style="font-size:8px">1 </font>and C<font style="font-size:8px">2</font></nobr></div>
+<div style="position:absolute;top:3107;left:75"><nobr>are the capacitances at node 1 and at node 2, respec-</nobr></div>
+<div style="position:absolute;top:3125;left:75"><nobr>tively, in Fig. 2.</nobr></div>
+<div style="position:absolute;top:3143;left:93"><nobr>Let us assume that the number of rows in the mem-</nobr></div>
+<div style="position:absolute;top:3161;left:75"><nobr>ory array is N and the number of cells combined in</nobr></div>
+<div style="position:absolute;top:3179;left:75"><nobr>the <font style="font-size:10px">divided bit-line </font>is denoted by M. Then, the capac-</nobr></div>
+<div style="position:absolute;top:3197;left:75"><nobr>itances C<font style="font-size:8px">1 </font>and C<font style="font-size:8px">2 </font>can be obtained as</nobr></div>
+<div style="position:absolute;top:3230;left:234"><nobr>C<font style="font-size:8px">1</font></nobr></div>
+<div style="position:absolute;top:3230;left:266"><nobr>= C</nobr></div>
+<div style="position:absolute;top:3220;left:306"><nobr>M+1</nobr></div>
+<div style="position:absolute;top:3240;left:321"><nobr>N</nobr></div>
+<div style="position:absolute;top:3267;left:135"><nobr>for N</nobr></div>
+<div style="position:absolute;top:3266;left:190"><nobr>1; C <font style="font-size:8px">1</font></nobr></div>
+<div style="position:absolute;top:3266;left:266"><nobr>= C</nobr></div>
+<div style="position:absolute;top:3256;left:306"><nobr>M</nobr></div>
+<div style="position:absolute;top:3277;left:308"><nobr>N</nobr></div>
+<div style="position:absolute;top:3266;left:403"><nobr>(10)</nobr></div>
+<div style="position:absolute;top:3303;left:234"><nobr>C<font style="font-size:8px">2</font></nobr></div>
+<div style="position:absolute;top:3303;left:266"><nobr>=</nobr></div>
+<div style="position:absolute;top:3293;left:297"><nobr>C</nobr></div>
+<div style="position:absolute;top:3313;left:295"><nobr>M</nobr></div>
+<div style="position:absolute;top:3303;left:316"><nobr>+ 0:1 C</nobr></div>
+<div style="position:absolute;top:3303;left:394"><nobr>(11)</nobr></div>
+<div style="position:absolute;top:3334;left:75"><nobr>where C denotes the original drain capacitance of N</nobr></div>
+<div style="position:absolute;top:3352;left:75"><nobr>rows. Metal capacitance contribution to total bit-line</nobr></div>
+<div style="position:absolute;top:3370;left:75"><nobr>capacitance is assumed to be 10% of the total drain</nobr></div>
+<div style="position:absolute;top:3388;left:75"><nobr>capacitance. To make a rst order approximation, we</nobr></div>
+<div style="position:absolute;top:3406;left:75"><nobr>can assume the resistances of two pass-transistors to</nobr></div>
+<div style="position:absolute;top:3424;left:75"><nobr>be equal.</nobr></div>
+<div style="position:absolute;top:3442;left:93"><nobr>With the approximation R</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:3447;left:273"><nobr>1 <font style="font-size:11px">= R </font>2 <font style="font-size:11px">= R, and from</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3460;left:75"><nobr>(9)(10), we can rewrite (7) as</nobr></div>
+<div style="position:absolute;top:3495;left:133"><nobr>RC(</nobr></div>
+<div style="position:absolute;top:3484;left:166"><nobr>M</nobr></div>
+<div style="position:absolute;top:3504;left:163"><nobr>2N</nobr></div>
+<div style="position:absolute;top:3494;left:186"><nobr>) + RC(</nobr></div>
+<div style="position:absolute;top:3484;left:244"><nobr>M</nobr></div>
+<div style="position:absolute;top:3504;left:241"><nobr>2N</nobr></div>
+<div style="position:absolute;top:3494;left:267"><nobr>+</nobr></div>
+<div style="position:absolute;top:3484;left:289"><nobr>2</nobr></div>
+<div style="position:absolute;top:3505;left:284"><nobr>M</nobr></div>
+<div style="position:absolute;top:3494;left:305"><nobr>+ 0:2)</nobr></div>
+<div style="position:absolute;top:3534;left:140"><nobr>[ln (</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:3520;left:175"><nobr>M</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:3532;left:173"><nobr>2<font style="font-size:9px">N</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3523;left:194"><nobr>+ <font style="font-size:8px">2</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:3531;left:211"><nobr>M</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3523;left:229"><nobr>+ 0:2</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:3542;left:175"><nobr>M</nobr></div>
+<div style="position:absolute;top:3553;left:176"><nobr>N</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3546;left:192"><nobr>+ <font style="font-size:8px">2</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:3553;left:209"><nobr>M</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3546;left:227"><nobr>+ 0:2</nobr></div>
+<div style="position:absolute;top:3534;left:265"><nobr>)+ln(</nobr></div>
+<div style="position:absolute;top:3524;left:320"><nobr>1</nobr></div>
+<div style="position:absolute;top:3545;left:311"><nobr>v(t)</nobr></div>
+<div style="position:absolute;top:3534;left:338"><nobr>)]</nobr></div>
+<div style="position:absolute;top:3567;left:144"><nobr>T <font style="font-size:9px">delay</font></nobr></div>
+<div style="position:absolute;top:3598;left:133"><nobr>RC(</nobr></div>
+<div style="position:absolute;top:3588;left:166"><nobr>M</nobr></div>
+<div style="position:absolute;top:3608;left:163"><nobr>2N</nobr></div>
+<div style="position:absolute;top:3598;left:186"><nobr>) + RC(</nobr></div>
+<div style="position:absolute;top:3588;left:241"><nobr>M</nobr></div>
+<div style="position:absolute;top:3608;left:242"><nobr>N</nobr></div>
+<div style="position:absolute;top:3598;left:262"><nobr>+</nobr></div>
+<div style="position:absolute;top:3588;left:284"><nobr>2</nobr></div>
+<div style="position:absolute;top:3608;left:279"><nobr>M</nobr></div>
+<div style="position:absolute;top:3598;left:300"><nobr>+ 0:2) ln (</nobr></div>
+<div style="position:absolute;top:3588;left:374"><nobr>1</nobr></div>
+<div style="position:absolute;top:3608;left:365"><nobr>v(t)</nobr></div>
+<div style="position:absolute;top:3598;left:392"><nobr>):(12)</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:2838;left:553"><nobr>1</nobr></div>
+<div style="position:absolute;top:2838;left:601"><nobr>2</nobr></div>
+<div style="position:absolute;top:2838;left:649"><nobr>4</nobr></div>
+<div style="position:absolute;top:2838;left:697"><nobr>8</nobr></div>
+<div style="position:absolute;top:2838;left:743"><nobr>16</nobr></div>
+<div style="position:absolute;top:2847;left:616"><nobr>No. of cells combined</nobr></div>
+<div style="position:absolute;top:2832;left:540"><nobr>0.0</nobr></div>
+<div style="position:absolute;top:2810;left:540"><nobr>0.2</nobr></div>
+<div style="position:absolute;top:2789;left:540"><nobr>0.4</nobr></div>
+<div style="position:absolute;top:2767;left:540"><nobr>0.6</nobr></div>
+<div style="position:absolute;top:2746;left:540"><nobr>0.8</nobr></div>
+<div style="position:absolute;top:2724;left:540"><nobr>1.0</nobr></div>
+<div style="position:absolute;top:2703;left:540"><nobr>1.2</nobr></div>
+<div style="position:absolute;top:2681;left:540"><nobr>1.4</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:2645;left:547"><nobr>Normalized Delay, Lower and Upper Bound</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:2662;left:627"><nobr>N = 1024 rows</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:2687;left:692"><nobr>Delay  Lower Bound</nobr></div>
+<div style="position:absolute;top:2692;left:692"><nobr>Delay Upper Bound</nobr></div>
+<div style="position:absolute;top:2698;left:692"><nobr>Approx. Delay</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:2897;left:481"><nobr>Figure 3. Normalized upper bound, lower</nobr></div>
+<div style="position:absolute;top:2915;left:481"><nobr>bound and approximate delay</nobr></div>
+<div style="position:absolute;top:2978;left:481"><nobr>For standard <b style="color:black;background-color:#99ff99">SRAM</b> cells, by <b style="color:black;background-color:#ff9999">using</b> the same model</nobr></div>
+<div style="position:absolute;top:2996;left:463"><nobr>as given in (7), we can write the delay as</nobr></div>
+<div style="position:absolute;top:3037;left:501"><nobr>T<font style="font-size:9px">delay </font>(standard) = 1:1RC ln (</nobr></div>
+<div style="position:absolute;top:3027;left:722"><nobr>1</nobr></div>
+<div style="position:absolute;top:3047;left:714"><nobr>v(t)</nobr></div>
+<div style="position:absolute;top:3037;left:740"><nobr>):</nobr></div>
+<div style="position:absolute;top:3037;left:790"><nobr>(13)</nobr></div>
+<div style="position:absolute;top:3079;left:481"><nobr>If we assume M</nobr></div>
+<div style="position:absolute;top:3080;left:598"><nobr>N, we can rewrite (11) as</nobr></div>
+<div style="position:absolute;top:3121;left:493"><nobr>T<font style="font-size:9px">delay</font></nobr></div>
+<div style="position:absolute;top:3121;left:547"><nobr>RC(</nobr></div>
+<div style="position:absolute;top:3111;left:582"><nobr>M</nobr></div>
+<div style="position:absolute;top:3131;left:583"><nobr>N</nobr></div>
+<div style="position:absolute;top:3120;left:603"><nobr>+</nobr></div>
+<div style="position:absolute;top:3110;left:624"><nobr>2</nobr></div>
+<div style="position:absolute;top:3131;left:620"><nobr>M</nobr></div>
+<div style="position:absolute;top:3120;left:641"><nobr>+ 0:2) ln (</nobr></div>
+<div style="position:absolute;top:3110;left:730"><nobr>1</nobr></div>
+<div style="position:absolute;top:3131;left:722"><nobr>v(t)</nobr></div>
+<div style="position:absolute;top:3120;left:748"><nobr>):</nobr></div>
+<div style="position:absolute;top:3120;left:790"><nobr>(14)</nobr></div>
+<div style="position:absolute;top:3162;left:463"><nobr>This equation is equivalent to the well known capaci-</nobr></div>
+<div style="position:absolute;top:3180;left:463"><nobr>tance discharge through a series resistance. <b style="color:black;background-color:#ff9999">Using</b> this</nobr></div>
+<div style="position:absolute;top:3198;left:463"><nobr>approximated delay we can write normalized delay as</nobr></div>
+<div style="position:absolute;top:3238;left:478"><nobr>T<font style="font-size:9px">delay </font>(normalized) =</nobr></div>
+<div style="position:absolute;top:3228;left:632"><nobr>1</nobr></div>
+<div style="position:absolute;top:3248;left:626"><nobr>1:1</nobr></div>
+<div style="position:absolute;top:3238;left:661"><nobr>[</nobr></div>
+<div style="position:absolute;top:3228;left:671"><nobr>M</nobr></div>
+<div style="position:absolute;top:3249;left:673"><nobr>N</nobr></div>
+<div style="position:absolute;top:3238;left:693"><nobr>+</nobr></div>
+<div style="position:absolute;top:3228;left:714"><nobr>2</nobr></div>
+<div style="position:absolute;top:3249;left:709"><nobr>M</nobr></div>
+<div style="position:absolute;top:3238;left:731"><nobr>+ 0:2]: (15)</nobr></div>
+<div style="position:absolute;top:3277;left:481"><nobr>If we assume a voltage swing of 10% on bit lines, we</nobr></div>
+<div style="position:absolute;top:3295;left:463"><nobr>can plot lower and upper bounds for delay and approx-</nobr></div>
+<div style="position:absolute;top:3313;left:463"><nobr>imate delay, <b style="color:black;background-color:#ff9999">using</b> (11)(12)(13), as a function of M for</nobr></div>
+<div style="position:absolute;top:3331;left:463"><nobr>a given value of N. Fig. 3 shows such plots.</nobr></div>
+<div style="position:absolute;top:3349;left:481"><nobr>Next, we nd an optimal value of M for minimum</nobr></div>
+<div style="position:absolute;top:3367;left:463"><nobr><b style="color:black;background-color:#a0ffff">power</b> consumption. <b style="color:black;background-color:#a0ffff">Power</b> consumption, as a function</nobr></div>
+<div style="position:absolute;top:3385;left:463"><nobr>of N and M, can be expressed as</nobr></div>
+<div style="position:absolute;top:3419;left:470"><nobr><b style="color:black;background-color:#a0ffff">power</b> = f(M) = (C</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:3424;left:602"><nobr>2</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3419;left:627"><nobr>V</nobr></div>
+<div style="position:absolute;top:3419;left:654"><nobr>V +2 C</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:3424;left:737"><nobr>1</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3419;left:758"><nobr>V <font style="font-size:8px">2</font>) f</nobr></div>
+<div style="position:absolute;top:3448;left:463"><nobr>= [(</nobr></div>
+<div style="position:absolute;top:3439;left:493"><nobr>C</nobr></div>
+<div style="position:absolute;top:3459;left:491"><nobr>M</nobr></div>
+<div style="position:absolute;top:3448;left:512"><nobr>+ 0:1 C)</nobr></div>
+<div style="position:absolute;top:3449;left:590"><nobr>V</nobr></div>
+<div style="position:absolute;top:3449;left:617"><nobr>V +2 C(</nobr></div>
+<div style="position:absolute;top:3439;left:718"><nobr>M</nobr></div>
+<div style="position:absolute;top:3459;left:719"><nobr>N</nobr></div>
+<div style="position:absolute;top:3448;left:736"><nobr>) V <font style="font-size:8px">2</font>] f: (16)</nobr></div>
+<div style="position:absolute;top:3486;left:463"><nobr>The above equation is derived from the fact that sub</nobr></div>
+<div style="position:absolute;top:3504;left:463"><nobr>bit-lines are not precharged and they can swing to full</nobr></div>
+<div style="position:absolute;top:3522;left:463"><nobr>supply voltage during a read operation. Normalized</nobr></div>
+<div style="position:absolute;top:3540;left:463"><nobr><b style="color:black;background-color:#a0ffff">power</b>, with respect to standard <b style="color:black;background-color:#99ff99">SRAM</b>, can be given</nobr></div>
+<div style="position:absolute;top:3558;left:463"><nobr>as</nobr></div>
+<div style="position:absolute;top:3596;left:463"><nobr>P ower(normalized) = (</nobr></div>
+<div style="position:absolute;top:3585;left:627"><nobr>1</nobr></div>
+<div style="position:absolute;top:3606;left:623"><nobr>M</nobr></div>
+<div style="position:absolute;top:3595;left:644"><nobr>+ 0:1) + 2</nobr></div>
+<div style="position:absolute;top:3585;left:750"><nobr>M</nobr></div>
+<div style="position:absolute;top:3607;left:730"><nobr>N</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:3603;left:767"><nobr>V</nobr></div>
+<div style="position:absolute;top:3614;left:769"><nobr>V</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3596;left:787"><nobr>: (17)</nobr></div>
+</span></font>
+
+<div style="position:absolute;top:3739;left:0"><hr><table border="0" width="100%"><tbody><tr><td align="right" bgcolor="eeeeee"><font face="arial,sans-serif"><a name="4"><b>Page 4</b></a></font></td></tr></tbody></table></div><font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:3858;left:289"><nobr>Sub Block 0</nobr></div>
+<div style="position:absolute;top:4019;left:290"><nobr>Sub Block 1</nobr></div>
+<div style="position:absolute;top:3974;left:295"><nobr>Global  Word  Line</nobr></div>
+<div style="position:absolute;top:3924;left:290"><nobr>Sub -Global  Word   Line</nobr></div>
+<div style="position:absolute;top:3891;left:293"><nobr><b style="color:white;background-color:#00aa00">Local</b>  Word Line</nobr></div>
+<div style="position:absolute;top:3995;left:301"><nobr>Sub  Bit-Line</nobr></div>
+<div style="position:absolute;top:3847;left:168"><nobr>Bit -Line</nobr></div>
+<div style="position:absolute;top:3848;left:270"><nobr>Bit -Line</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:19px;font-family:Times">
+<div style="position:absolute;top:4082;left:93"><nobr>Figure 4. Hierarchical Divided Bit-Line Archi-</nobr></div>
+<div style="position:absolute;top:4100;left:93"><nobr>tecture, L = 3, <font style="font-size:11px">M</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:4113;left:209"><nobr>1 = 4, <font style="font-size:11px">M </font>2 = 2</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4168;left:93"><nobr>By di erentiating (15) with respect to M and solv-</nobr></div>
+<div style="position:absolute;top:4186;left:75"><nobr>ing this, we get an optimum value of M for minimum</nobr></div>
+<div style="position:absolute;top:4204;left:75"><nobr><b style="color:black;background-color:#a0ffff">power</b> as</nobr></div>
+<div style="position:absolute;top:4246;left:164"><nobr>M <font style="font-size:9px">opt </font>=</nobr></div>
+</span></font>
+<font face="Times" size="5"><span style="font-size:30px;font-family:Times">
+<div style="position:absolute;top:4204;left:216"><nobr>r</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4246;left:227"><nobr>(</nobr></div>
+<div style="position:absolute;top:4236;left:239"><nobr>N</nobr></div>
+<div style="position:absolute;top:4256;left:242"><nobr>2</nobr></div>
+<div style="position:absolute;top:4236;left:278"><nobr>V</nobr></div>
+<div style="position:absolute;top:4256;left:280"><nobr>V</nobr></div>
+<div style="position:absolute;top:4246;left:300"><nobr>):</nobr></div>
+<div style="position:absolute;top:4246;left:402"><nobr>(18)</nobr></div>
+<div style="position:absolute;top:4284;left:75"><nobr>For example, with N = 1024 and</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:4281;left:313"><nobr>V</nobr></div>
+<div style="position:absolute;top:4292;left:315"><nobr>V</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4284;left:338"><nobr>= 0:1, we get</nobr></div>
+<div style="position:absolute;top:4302;left:75"><nobr>M <font style="font-size:9px">opt</font></nobr></div>
+<div style="position:absolute;top:4302;left:123"><nobr>8.</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:15px;font-family:Times">
+<div style="position:absolute;top:4340;left:75"><nobr>3 Hierarchical Divided Bit-Line Ap-</nobr></div>
+<div style="position:absolute;top:4361;left:105"><nobr>proach</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4402;left:93"><nobr>In high density SRAMs, the number of sub bit-lines</nobr></div>
+<div style="position:absolute;top:4420;left:75"><nobr>will increase and even with <font style="font-size:10px">divided bit-line </font>architec-</nobr></div>
+<div style="position:absolute;top:4438;left:75"><nobr>ture, bit-line capacitance can be signi cant. From this</nobr></div>
+<div style="position:absolute;top:4456;left:75"><nobr>point of view, <font style="font-size:10px">hierarchical divided bit-line </font>architecture</nobr></div>
+<div style="position:absolute;top:4474;left:75"><nobr>is developed. Fig. 4 shows the concept of <font style="font-size:10px">hierarchical</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:10px;font-family:Times">
+<div style="position:absolute;top:4493;left:75"><nobr>divided bit-line <font style="font-size:11px">approach. In this architecture, the bit-</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4510;left:75"><nobr>line is divided into more than two levels. The number</nobr></div>
+<div style="position:absolute;top:4528;left:75"><nobr>of hierarchies, as it will be shown further, is determined</nobr></div>
+<div style="position:absolute;top:4546;left:75"><nobr>by the number of rows in the <b style="color:black;background-color:#99ff99">SRAM</b> array.</nobr></div>
+<div style="position:absolute;top:4564;left:93"><nobr>Theoretical results of previous section on <font style="font-size:10px">divided bit-</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:10px;font-family:Times">
+<div style="position:absolute;top:4582;left:75"><nobr>line <font style="font-size:11px">can be extended to the </font>hierarchical divided bit-line</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4599;left:75"><nobr>architecture. Let us assume that the total number of</nobr></div>
+<div style="position:absolute;top:4617;left:75"><nobr>levels in the hierarchy is L and at each level i, the</nobr></div>
+<div style="position:absolute;top:4635;left:75"><nobr>number of blocks combined to form a new block is M</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:4640;left:420"><nobr>i <font style="font-size:11px">.</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4653;left:75"><nobr>Then capacitance, C <font style="font-size:9px">i </font>at each node is given by</nobr></div>
+<div style="position:absolute;top:4691;left:178"><nobr>C<font style="font-size:9px">i </font>= C</nobr></div>
+<div style="position:absolute;top:4681;left:246"><nobr>M <font style="font-size:9px">i </font>+ 1</nobr></div>
+<div style="position:absolute;top:4701;left:262"><nobr>N</nobr></div>
+</span></font>
+<font face="Times" size="4"><span style="font-size:25px;font-family:Times">
+<div style="position:absolute;top:4677;left:303"><nobr>8 <font style="font-size:11px">i </font>6<font style="font-size:11px">= L</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4717;left:178"><nobr>for N</nobr></div>
+<div style="position:absolute;top:4717;left:234"><nobr>1;</nobr></div>
+<div style="position:absolute;top:4746;left:178"><nobr>C<font style="font-size:9px">i </font>= C</nobr></div>
+<div style="position:absolute;top:4736;left:246"><nobr>M <font style="font-size:9px">i</font></nobr></div>
+<div style="position:absolute;top:4757;left:249"><nobr>N</nobr></div>
+<div style="position:absolute;top:4782;left:178"><nobr>C<font style="font-size:9px">L </font>= C</nobr></div>
+<div style="position:absolute;top:4772;left:276"><nobr>1</nobr></div>
+</span></font>
+<font face="Times" size="5"><span style="font-size:30px;font-family:Times">
+<div style="position:absolute;top:4766;left:250"><nobr>Q<font style="font-size:9px">L</font><font style="font-size:8px">1</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:4802;left:264"><nobr>i<font style="font-size:8px">=1</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4796;left:291"><nobr>M <font style="font-size:9px">i</font></nobr></div>
+<div style="position:absolute;top:4782;left:312"><nobr>:</nobr></div>
+<div style="position:absolute;top:4782;left:403"><nobr>(19)</nobr></div>
+<div style="position:absolute;top:3849;left:481"><nobr><b style="color:black;background-color:#ff9999">Using</b> these capacitances and again making the as-</nobr></div>
+<div style="position:absolute;top:3867;left:463"><nobr>sumption that resistance values of all pass transistors</nobr></div>
+<div style="position:absolute;top:3885;left:463"><nobr>are equal, we can write the expression for active <b style="color:black;background-color:#a0ffff">power</b></nobr></div>
+<div style="position:absolute;top:3903;left:463"><nobr>as</nobr></div>
+<div style="position:absolute;top:3934;left:584"><nobr><b style="color:black;background-color:#a0ffff">Power</b> = f(M <font style="font-size:8px">1</font>; :::; M <font style="font-size:9px">L</font><font style="font-size:8px">1 </font>; L)</nobr></div>
+<div style="position:absolute;top:3971;left:480"><nobr>=</nobr></div>
+<div style="position:absolute;top:3961;left:498"><nobr>2V <font style="font-size:8px">2</font>C</nobr></div>
+<div style="position:absolute;top:3981;left:510"><nobr>N</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:3955;left:556"><nobr>L<font style="font-size:8px">1</font></nobr></div>
+</span></font>
+<font face="Times" size="5"><span style="font-size:30px;font-family:Times">
+<div style="position:absolute;top:3938;left:557"><nobr>X</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:3991;left:558"><nobr>i<font style="font-size:8px">=1</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3971;left:582"><nobr>M <font style="font-size:9px">i </font>+</nobr></div>
+<div style="position:absolute;top:3961;left:627"><nobr>C V V</nobr></div>
+</span></font>
+<font face="Times" size="5"><span style="font-size:30px;font-family:Times">
+<div style="position:absolute;top:3954;left:621"><nobr>Q<font style="font-size:9px">L</font><font style="font-size:8px">1</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:3991;left:636"><nobr>i<font style="font-size:8px">=1</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:3984;left:662"><nobr>M <font style="font-size:9px">i</font></nobr></div>
+<div style="position:absolute;top:3971;left:687"><nobr>+ 0:1C V V: (20)</nobr></div>
+<div style="position:absolute;top:4015;left:463"><nobr>Similarly, we can write the expression for delay for hi-</nobr></div>
+<div style="position:absolute;top:4033;left:463"><nobr>erarchical bit-line as</nobr></div>
+<div style="position:absolute;top:4075;left:465"><nobr>T<font style="font-size:9px">Delay </font>= RC (</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:4059;left:574"><nobr>L<font style="font-size:8px">1</font></nobr></div>
+</span></font>
+<font face="Times" size="5"><span style="font-size:30px;font-family:Times">
+<div style="position:absolute;top:4043;left:575"><nobr>X</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:4095;left:576"><nobr>i<font style="font-size:8px">=1</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4065;left:602"><nobr>M <font style="font-size:9px">i </font>i</nobr></div>
+<div style="position:absolute;top:4086;left:607"><nobr>N</nobr></div>
+<div style="position:absolute;top:4075;left:632"><nobr>+</nobr></div>
+<div style="position:absolute;top:4065;left:673"><nobr>L</nobr></div>
+</span></font>
+<font face="Times" size="5"><span style="font-size:30px;font-family:Times">
+<div style="position:absolute;top:4059;left:648"><nobr>Q<font style="font-size:9px">L</font><font style="font-size:8px">1</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:4095;left:662"><nobr>i<font style="font-size:8px">=1</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4089;left:689"><nobr>M <font style="font-size:9px">i</font></nobr></div>
+<div style="position:absolute;top:4075;left:714"><nobr>+ 0:1 L): (21)</nobr></div>
+<div style="position:absolute;top:4119;left:481"><nobr>To obtain the optimum parameter for the number</nobr></div>
+<div style="position:absolute;top:4137;left:463"><nobr>of blocks combined at each level, we di erentiate (19)</nobr></div>
+<div style="position:absolute;top:4155;left:463"><nobr>partially with respect to all M</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:4160;left:654"><nobr>i <font style="font-size:11px">’s and solve the following</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4173;left:463"><nobr>equation</nobr></div>
+<div style="position:absolute;top:4202;left:541"><nobr>@f</nobr></div>
+<div style="position:absolute;top:4222;left:536"><nobr>@M<font style="font-size:9px">i</font></nobr></div>
+<div style="position:absolute;top:4212;left:570"><nobr>= 0 <font style="font-size:25px">8 </font>i=1toL 1:</nobr></div>
+<div style="position:absolute;top:4212;left:781"><nobr>(22)</nobr></div>
+<div style="position:absolute;top:4249;left:463"><nobr>The solution to the above equation gives the optimum</nobr></div>
+<div style="position:absolute;top:4267;left:463"><nobr>values for M <font style="font-size:9px">i </font>’s, which are given by</nobr></div>
+<div style="position:absolute;top:4311;left:491"><nobr>M <font style="font-size:8px">1 </font>= M <font style="font-size:8px">2 </font>=</nobr></div>
+<div style="position:absolute;top:4310;left:602"><nobr>= M<font style="font-size:9px">L</font><font style="font-size:8px">1</font></nobr></div>
+<div style="position:absolute;top:4310;left:654"><nobr>= (</nobr></div>
+<div style="position:absolute;top:4300;left:677"><nobr>N</nobr></div>
+<div style="position:absolute;top:4321;left:680"><nobr>2</nobr></div>
+<div style="position:absolute;top:4300;left:716"><nobr>V</nobr></div>
+<div style="position:absolute;top:4321;left:719"><nobr>V</nobr></div>
+<div style="position:absolute;top:4310;left:739"><nobr>)</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:4297;left:747"><nobr>1</nobr></div>
+<div style="position:absolute;top:4305;left:746"><nobr>L</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4311;left:756"><nobr>:</nobr></div>
+<div style="position:absolute;top:4310;left:791"><nobr>(23)</nobr></div>
+<div style="position:absolute;top:4347;left:463"><nobr>By substituting these values for M <font style="font-size:9px">i </font>’s in (19) and (20),</nobr></div>
+<div style="position:absolute;top:4365;left:463"><nobr>expressions for <b style="color:black;background-color:#a0ffff">Power</b> and Delay in terms of N and L</nobr></div>
+<div style="position:absolute;top:4382;left:463"><nobr>can be obtained as</nobr></div>
+<div style="position:absolute;top:4423;left:486"><nobr>P ower =</nobr></div>
+<div style="position:absolute;top:4413;left:573"><nobr>2V <font style="font-size:8px">2</font>C</nobr></div>
+<div style="position:absolute;top:4433;left:585"><nobr>N</nobr></div>
+<div style="position:absolute;top:4423;left:613"><nobr>L (</nobr></div>
+<div style="position:absolute;top:4413;left:649"><nobr>N</nobr></div>
+<div style="position:absolute;top:4433;left:652"><nobr>2</nobr></div>
+<div style="position:absolute;top:4413;left:670"><nobr>V</nobr></div>
+<div style="position:absolute;top:4433;left:672"><nobr>V</nobr></div>
+<div style="position:absolute;top:4423;left:692"><nobr>)</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:4410;left:701"><nobr>1</nobr></div>
+<div style="position:absolute;top:4417;left:700"><nobr>L</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4423;left:713"><nobr>+ 0:1C V V(24)</nobr></div>
+<div style="position:absolute;top:4465;left:488"><nobr>T<font style="font-size:9px">Delay</font></nobr></div>
+<div style="position:absolute;top:4465;left:545"><nobr>= RC (</nobr></div>
+<div style="position:absolute;top:4454;left:620"><nobr>(L 1)L</nobr></div>
+<div style="position:absolute;top:4475;left:645"><nobr>2</nobr></div>
+<div style="position:absolute;top:4465;left:694"><nobr>(</nobr></div>
+<div style="position:absolute;top:4455;left:706"><nobr>N</nobr></div>
+<div style="position:absolute;top:4475;left:709"><nobr>2</nobr></div>
+<div style="position:absolute;top:4455;left:745"><nobr>V</nobr></div>
+<div style="position:absolute;top:4475;left:747"><nobr>V</nobr></div>
+<div style="position:absolute;top:4465;left:768"><nobr>)</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:4451;left:776"><nobr>1</nobr></div>
+<div style="position:absolute;top:4459;left:775"><nobr>L</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4465;left:785"><nobr>)</nobr></div>
+<div style="position:absolute;top:4501;left:545"><nobr>+ RC (</nobr></div>
+<div style="position:absolute;top:4491;left:661"><nobr>L</nobr></div>
+<div style="position:absolute;top:4519;left:620"><nobr>( <font style="font-size:9px">N</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:4527;left:630"><nobr>2</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:4515;left:663"><nobr>V</nobr></div>
+<div style="position:absolute;top:4526;left:665"><nobr>V</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4519;left:682"><nobr>)</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:4512;left:689"><nobr>L 1</nobr></div>
+<div style="position:absolute;top:4520;left:696"><nobr>L</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4501;left:717"><nobr>+ 0:1L): (25)</nobr></div>
+<div style="position:absolute;top:4549;left:481"><nobr>The optimum value of L can be obtained by di er-</nobr></div>
+<div style="position:absolute;top:4567;left:463"><nobr>entiating (23) and is given as</nobr></div>
+<div style="position:absolute;top:4606;left:580"><nobr>L = ln(</nobr></div>
+<div style="position:absolute;top:4596;left:630"><nobr>N</nobr></div>
+<div style="position:absolute;top:4616;left:633"><nobr>2</nobr></div>
+<div style="position:absolute;top:4596;left:669"><nobr>V</nobr></div>
+<div style="position:absolute;top:4616;left:671"><nobr>V</nobr></div>
+<div style="position:absolute;top:4606;left:691"><nobr>):</nobr></div>
+<div style="position:absolute;top:4606;left:790"><nobr>(26)</nobr></div>
+<div style="position:absolute;top:4641;left:481"><nobr>Fig. 5 shows the variation in <b style="color:black;background-color:#a0ffff">power</b> and delay with</nobr></div>
+<div style="position:absolute;top:4659;left:463"><nobr>N = 1024 and with optimum values of M</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:4664;left:736"><nobr>i <font style="font-size:11px">’s for di er-</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4677;left:463"><nobr>ent values of L.</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:15px;font-family:Times">
+<div style="position:absolute;top:4715;left:463"><nobr>4</nobr></div>
+<div style="position:absolute;top:4715;left:500"><nobr>Experimental Results</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:4756;left:481"><nobr>To test our ideas, we have modeled a <b style="color:black;background-color:#99ff99">SRAM</b> test</nobr></div>
+<div style="position:absolute;top:4774;left:463"><nobr>chip. This modeling is based on the standard capaci-</nobr></div>
+<div style="position:absolute;top:4792;left:463"><nobr>tance extraction and resistance estimation techniques</nobr></div>
+</span></font>
+
+<div style="position:absolute;top:4927;left:0"><hr><table border="0" width="100%"><tbody><tr><td align="right" bgcolor="eeeeee"><font face="arial,sans-serif"><a name="5"><b>Page 5</b></a></font></td></tr></tbody></table></div><font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:5184;left:179"><nobr>1</nobr></div>
+<div style="position:absolute;top:5184;left:219"><nobr>2</nobr></div>
+<div style="position:absolute;top:5184;left:259"><nobr>3</nobr></div>
+<div style="position:absolute;top:5184;left:299"><nobr>4</nobr></div>
+<div style="position:absolute;top:5184;left:339"><nobr>5</nobr></div>
+<div style="position:absolute;top:5192;left:252"><nobr>Levels</nobr></div>
+<div style="position:absolute;top:5179;left:169"><nobr>0.0</nobr></div>
+<div style="position:absolute;top:5152;left:169"><nobr>0.2</nobr></div>
+<div style="position:absolute;top:5125;left:169"><nobr>0.4</nobr></div>
+<div style="position:absolute;top:5098;left:169"><nobr>0.6</nobr></div>
+<div style="position:absolute;top:5072;left:169"><nobr>0.8</nobr></div>
+<div style="position:absolute;top:5045;left:169"><nobr>1.0</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:6px;font-family:Times">
+<div style="position:absolute;top:5023;left:184"><nobr>Hierarchical Divided Bit-Line Approach</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:5038;left:248"><nobr>N = 1024</nobr></div>
+<div style="position:absolute;top:5053;left:273"><nobr>Normalized <b style="color:black;background-color:#a0ffff">Power</b></nobr></div>
+<div style="position:absolute;top:5058;left:273"><nobr>Normalized Delay</nobr></div>
+<div style="position:absolute;top:5062;left:273"><nobr>Normalized <b style="color:black;background-color:#a0ffff">Power</b>-Delay Product</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:19px;font-family:Times">
+<div style="position:absolute;top:5230;left:93"><nobr>Figure 5. Normalized <b style="color:black;background-color:#a0ffff">Power</b>, Delay and <b style="color:black;background-color:#a0ffff">Power</b>-</nobr></div>
+<div style="position:absolute;top:5248;left:93"><nobr>Delay product for different levels with N =</nobr></div>
+<div style="position:absolute;top:5266;left:93"><nobr>1024 and optimum <font style="font-size:11px">M</font></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:5278;left:243"><nobr>i s</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:5346;left:264"><nobr>R</nobr></div>
+<div style="position:absolute;top:5356;left:264"><nobr>O</nobr></div>
+<div style="position:absolute;top:5365;left:264"><nobr>W</nobr></div>
+<div style="position:absolute;top:5374;left:264"><nobr>D</nobr></div>
+<div style="position:absolute;top:5383;left:264"><nobr>E</nobr></div>
+<div style="position:absolute;top:5393;left:264"><nobr>C</nobr></div>
+<div style="position:absolute;top:5402;left:264"><nobr>O</nobr></div>
+<div style="position:absolute;top:5411;left:264"><nobr>D</nobr></div>
+<div style="position:absolute;top:5421;left:264"><nobr>E</nobr></div>
+<div style="position:absolute;top:5430;left:264"><nobr>R</nobr></div>
+<div style="position:absolute;top:5324;left:238"><nobr>PREDECODER</nobr></div>
+<div style="position:absolute;top:5333;left:202"><nobr>PRECHARGE  and BIT LINE  LOADS</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:5366;left:140"><nobr>1024</nobr></div>
+<div style="position:absolute;top:5372;left:140"><nobr>rows</nobr></div>
+<div style="position:absolute;top:5352;left:125"><nobr>Global  WL</nobr></div>
+<div style="position:absolute;top:5441;left:191"><nobr><b style="color:white;background-color:#886800">SENSE</b>  AMPLIFIER  AND  I/O  CIRCUIT</nobr></div>
+<div style="position:absolute;top:5459;left:176"><nobr>8 sub blocks</nobr></div>
+<div style="position:absolute;top:5467;left:229"><nobr>4 blocks</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:5502;left:147"><nobr>Figure 6. Model of Test <b style="color:black;background-color:#99ff99">SRAM</b></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:5549;left:75"><nobr>described in [10]. To model our test <b style="color:black;background-color:#99ff99">SRAM</b>, we have</nobr></div>
+<div style="position:absolute;top:5567;left:75"><nobr>assumed the con guration as shown in Fig. 6. We have</nobr></div>
+<div style="position:absolute;top:5585;left:75"><nobr>assumed the hierarchical word decoding and standard</nobr></div>
+<div style="position:absolute;top:5603;left:75"><nobr>precharging and <b style="color:white;background-color:#886800">sense</b> ampli er techniques. Circuits</nobr></div>
+<div style="position:absolute;top:5621;left:75"><nobr>for precharging and <b style="color:white;background-color:#886800">sense</b> ampli er are the same as</nobr></div>
+<div style="position:absolute;top:5639;left:75"><nobr>given in [2]. The experimental results for memories</nobr></div>
+<div style="position:absolute;top:5657;left:75"><nobr>based on the <font style="font-size:10px">divided bit-line approach </font>are shown in</nobr></div>
+<div style="position:absolute;top:5675;left:75"><nobr>Fig. 7. These results show that the experimental ob-</nobr></div>
+<div style="position:absolute;top:5693;left:75"><nobr>servations and theoretically obtained results follow the</nobr></div>
+<div style="position:absolute;top:5711;left:75"><nobr>same trend. It is clear from the plots that the de-</nobr></div>
+<div style="position:absolute;top:5728;left:75"><nobr>lay does not reduce as much as that predicted by the</nobr></div>
+<div style="position:absolute;top:5746;left:75"><nobr>plots shown in Fig. 3. This is mainly because of our</nobr></div>
+<div style="position:absolute;top:5764;left:75"><nobr>simpli ed assumption of same resistance for both pass-</nobr></div>
+<div style="position:absolute;top:5782;left:75"><nobr>transistors. Fig. 7 also shows the results for hierarchi-</nobr></div>
+<div style="position:absolute;top:5800;left:75"><nobr>cal divided bit-line approach. As it is evident from the</nobr></div>
+<div style="position:absolute;top:5818;left:75"><nobr>plots, the delay again follows the same trend. However</nobr></div>
+<div style="position:absolute;top:5836;left:75"><nobr>it does not exactly follow the same trend as predicted</nobr></div>
+<div style="position:absolute;top:5854;left:75"><nobr>for <b style="color:black;background-color:#a0ffff">power</b>. This is mainly because of our approxima-</nobr></div>
+<div style="position:absolute;top:5872;left:75"><nobr>tion of optimum value of M <font style="font-size:9px">i </font>’s to the nearest <b style="color:black;background-color:#a0ffff">power</b> of 2.</nobr></div>
+<div style="position:absolute;top:5890;left:75"><nobr>This approximation is assumed as it makes the design</nobr></div>
+<div style="position:absolute;top:5908;left:75"><nobr>of decoders simple.</nobr></div>
+<div style="position:absolute;top:5926;left:93"><nobr>These results show that the <b style="color:black;background-color:#a0ffff">power</b> consumption is</nobr></div>
+<div style="position:absolute;top:5944;left:75"><nobr>reduced approximately by 50 60% and access time</nobr></div>
+<div style="position:absolute;top:5962;left:75"><nobr>is reduced by 20 30%. It is important to note that</nobr></div>
+<div style="position:absolute;top:5980;left:75"><nobr>this reduction in <b style="color:black;background-color:#a0ffff">power</b> is valid only for active <b style="color:black;background-color:#a0ffff">power</b></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:5656;left:553"><nobr>1</nobr></div>
+<div style="position:absolute;top:5656;left:601"><nobr>2</nobr></div>
+<div style="position:absolute;top:5656;left:649"><nobr>3</nobr></div>
+<div style="position:absolute;top:5656;left:696"><nobr>4</nobr></div>
+<div style="position:absolute;top:5656;left:744"><nobr>5</nobr></div>
+<div style="position:absolute;top:5665;left:630"><nobr>No. of Levels</nobr></div>
+<div style="position:absolute;top:5650;left:541"><nobr>0.0</nobr></div>
+<div style="position:absolute;top:5629;left:541"><nobr>0.2</nobr></div>
+<div style="position:absolute;top:5607;left:541"><nobr>0.4</nobr></div>
+<div style="position:absolute;top:5586;left:541"><nobr>0.6</nobr></div>
+<div style="position:absolute;top:5564;left:541"><nobr>0.8</nobr></div>
+<div style="position:absolute;top:5543;left:541"><nobr>1.0</nobr></div>
+<div style="position:absolute;top:5522;left:541"><nobr>1.2</nobr></div>
+<div style="position:absolute;top:5500;left:541"><nobr>1.4</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:5464;left:554"><nobr>Hierarchical Divided Bit-Line Architecture</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:5482;left:615"><nobr>5v, 1 micron, N = 1024</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:5499;left:669"><nobr>Normalized <b style="color:black;background-color:#a0ffff">Power</b></nobr></div>
+<div style="position:absolute;top:5505;left:669"><nobr>Normalized Delay</nobr></div>
+<div style="position:absolute;top:5510;left:669"><nobr>Normalized <b style="color:black;background-color:#a0ffff">Power</b>-Delay Product</nobr></div>
+<div style="position:absolute;top:5415;left:553"><nobr>1</nobr></div>
+<div style="position:absolute;top:5415;left:617"><nobr>2</nobr></div>
+<div style="position:absolute;top:5415;left:680"><nobr>4</nobr></div>
+<div style="position:absolute;top:5415;left:744"><nobr>8</nobr></div>
+<div style="position:absolute;top:5423;left:615"><nobr>No. of Combined Cells</nobr></div>
+<div style="position:absolute;top:5409;left:541"><nobr>0.0</nobr></div>
+<div style="position:absolute;top:5389;left:541"><nobr>0.2</nobr></div>
+<div style="position:absolute;top:5370;left:541"><nobr>0.4</nobr></div>
+<div style="position:absolute;top:5350;left:541"><nobr>0.6</nobr></div>
+<div style="position:absolute;top:5330;left:541"><nobr>0.8</nobr></div>
+<div style="position:absolute;top:5310;left:541"><nobr>1.0</nobr></div>
+<div style="position:absolute;top:5290;left:541"><nobr>1.2</nobr></div>
+<div style="position:absolute;top:5271;left:541"><nobr>1.4</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:7px;font-family:Times">
+<div style="position:absolute;top:5237;left:589"><nobr>Divided Bit-Line Approach</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:5253;left:632"><nobr>5v, 1micron</nobr></div>
+<div style="position:absolute;top:5271;left:671"><nobr>Normalized <b style="color:black;background-color:#a0ffff">Power</b></nobr></div>
+<div style="position:absolute;top:5275;left:671"><nobr>Normalized Delay</nobr></div>
+<div style="position:absolute;top:5280;left:671"><nobr>Normalized <b style="color:black;background-color:#a0ffff">Power</b>-Delay Product</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:5716;left:481"><nobr>Figure 7. Experimental Results for Divided</nobr></div>
+<div style="position:absolute;top:5733;left:481"><nobr>Bit-Line and Hierarchical Divided Bit-Line ar-</nobr></div>
+<div style="position:absolute;top:5751;left:481"><nobr>chitecture.</nobr></div>
+</span></font>
+
+<div style="position:absolute;top:6115;left:0"><hr><table border="0" width="100%"><tbody><tr><td align="right" bgcolor="eeeeee"><font face="arial,sans-serif"><a name="6"><b>Page 6</b></a></font></td></tr></tbody></table></div><font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:6225;left:75"><nobr>and does not take into account the <b style="color:black;background-color:#a0ffff">power</b> consumed by</nobr></div>
+<div style="position:absolute;top:6243;left:75"><nobr><b style="color:white;background-color:#886800">sense</b> ampli er and decoders.</nobr></div>
+<div style="position:absolute;top:6261;left:93"><nobr>To test our ideas in silicon, we have custom designed</nobr></div>
+<div style="position:absolute;top:6279;left:75"><nobr>a 2K 8 bits <b style="color:black;background-color:#99ff99">SRAM</b> chip <b style="color:black;background-color:#ff9999">using</b> MAGIC layout tool.</nobr></div>
+<div style="position:absolute;top:6297;left:75"><nobr>The architecture of this chip is based on the model of</nobr></div>
+<div style="position:absolute;top:6314;left:75"><nobr>Fig. 6 and 8 cells are combined at the sub bit-line</nobr></div>
+<div style="position:absolute;top:6332;left:75"><nobr>level. The complete layout of the chip is shown in Fig.</nobr></div>
+<div style="position:absolute;top:6350;left:75"><nobr>9. This chip contains approximately 105K transistors</nobr></div>
+<div style="position:absolute;top:6368;left:75"><nobr>and requires 6:81 mm <font style="font-size:8px">2 </font>area in 0:5 technology. The</nobr></div>
+<div style="position:absolute;top:6386;left:75"><nobr>simulation results on this chip match very closely with</nobr></div>
+<div style="position:absolute;top:6404;left:75"><nobr>that predicted by the model.</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:15px;font-family:Times">
+<div style="position:absolute;top:6442;left:75"><nobr>5</nobr></div>
+<div style="position:absolute;top:6442;left:114"><nobr>Extension of Divided Bit-Line Ap-</nobr></div>
+<div style="position:absolute;top:6463;left:105"><nobr>proach</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:6505;left:93"><nobr><b style="color:black;background-color:#a0ffff">Power</b> consumption in memories can also be reduced</nobr></div>
+<div style="position:absolute;top:6523;left:75"><nobr>by reducing the voltage swing on the bit-lines as active</nobr></div>
+<div style="position:absolute;top:6541;left:75"><nobr>current also depends upon the voltage swing on the bit-</nobr></div>
+<div style="position:absolute;top:6559;left:75"><nobr>lines (see (3) and (4)). Voltage swing can be controlled</nobr></div>
+<div style="position:absolute;top:6576;left:75"><nobr>by <b style="color:black;background-color:#ff9999">using</b> the word line and creating a desired pulse on</nobr></div>
+<div style="position:absolute;top:6594;left:75"><nobr>the word line by <b style="color:black;background-color:#ff9999">using</b> a replica feedback [1]. The tech-</nobr></div>
+<div style="position:absolute;top:6612;left:75"><nobr>nique described in [1] uses one extra reference column</nobr></div>
+<div style="position:absolute;top:6630;left:75"><nobr>and one row for creating a pulse. <b style="color:black;background-color:#ff9999">Using</b> the technique</nobr></div>
+<div style="position:absolute;top:6648;left:75"><nobr>proposed in [1], the <font style="font-size:10px">divided bit-line approach </font>can be</nobr></div>
+<div style="position:absolute;top:6666;left:75"><nobr>modi ed to provide limited voltage swing. In <font style="font-size:10px">divided</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:10px;font-family:Times">
+<div style="position:absolute;top:6685;left:75"><nobr>bit-line approach<font style="font-size:11px">, bit-line is divided into sub bit-lines</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:6702;left:75"><nobr>of <b style="color:black;background-color:#99ff99">SRAM</b> cells. The basic idea behind this extension</nobr></div>
+<div style="position:absolute;top:6720;left:75"><nobr>is to make use of these sub bit-lines, which have much</nobr></div>
+<div style="position:absolute;top:6738;left:75"><nobr>smaller capacitance, to develop a limited voltage swing</nobr></div>
+<div style="position:absolute;top:6756;left:75"><nobr>on the bit-line. The charge developed on the bit-lines</nobr></div>
+<div style="position:absolute;top:6774;left:75"><nobr>due to precharging is shared with the much smaller ca-</nobr></div>
+<div style="position:absolute;top:6792;left:75"><nobr>pacitance of the sub bit-line to produce a limited swing.</nobr></div>
+<div style="position:absolute;top:6810;left:75"><nobr>This charge sharing between a small capacitance of sub</nobr></div>
+<div style="position:absolute;top:6828;left:75"><nobr>bit-line and the large capacitance of bit-line produces</nobr></div>
+<div style="position:absolute;top:6846;left:75"><nobr>a limited voltage swing on the large capacitance.</nobr></div>
+<div style="position:absolute;top:6863;left:93"><nobr>This idea can be more suitably explained with the</nobr></div>
+<div style="position:absolute;top:6881;left:75"><nobr>help of an example. Consider a <b style="color:black;background-color:#99ff99">SRAM</b> with 1024 rows</nobr></div>
+<div style="position:absolute;top:6899;left:75"><nobr>and 8 cells combined together to reduce the bit-line</nobr></div>
+<div style="position:absolute;top:6917;left:75"><nobr>capacitance as shown in Fig. 8. The capacitance of</nobr></div>
+<div style="position:absolute;top:6935;left:75"><nobr>the bit-line is approximately 16 times that of the ca-</nobr></div>
+<div style="position:absolute;top:6953;left:75"><nobr>pacitance of a sub bit-line. Since, bit-lines are always</nobr></div>
+<div style="position:absolute;top:6971;left:75"><nobr>precharged before reading, initially both bit-line and</nobr></div>
+<div style="position:absolute;top:6989;left:75"><nobr>bit line will be at V <font style="font-size:9px">dd</font>. While reading, depending</nobr></div>
+<div style="position:absolute;top:7007;left:75"><nobr>upon whether a 1 or 0 is stored in the memory cell, sub</nobr></div>
+<div style="position:absolute;top:7025;left:75"><nobr>bit-line (sub bit line) will be charged (discharged) or</nobr></div>
+<div style="position:absolute;top:7043;left:75"><nobr>discharged (charged). We begin the reading operation</nobr></div>
+<div style="position:absolute;top:7061;left:75"><nobr>by making the pass transistors of individual cells ON</nobr></div>
+<div style="position:absolute;top:7079;left:75"><nobr>and those connecting bit-lines to sub bit-lines OFF. Af-</nobr></div>
+<div style="position:absolute;top:7096;left:75"><nobr>ter charging or discharging of the sub bit-lines, the pass</nobr></div>
+<div style="position:absolute;top:7114;left:75"><nobr>transistor for sub bit-line is switched o and for bit-line</nobr></div>
+<div style="position:absolute;top:7132;left:75"><nobr>is switched on. This can be done by applying a small</nobr></div>
+<div style="position:absolute;top:7150;left:75"><nobr>pulse to pass transistors. This pulse can be created</nobr></div>
+<div style="position:absolute;top:7168;left:75"><nobr>by simple pulse generation techniques. As bit-lines are</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:6331;left:604"><nobr>8th  Cell</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:6322;left:721"><nobr>WLs  for  Sub bitlines</nobr></div>
+<div style="position:absolute;top:6288;left:725"><nobr>WL  for  <b style="color:white;background-color:#880000">bitline</b></nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:6231;left:560"><nobr>Bit</nobr></div>
+<div style="position:absolute;top:6221;left:631"><nobr>1st Cell</nobr></div>
+<div style="position:absolute;top:6231;left:669"><nobr>Bit</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:6369;left:641"><nobr>Sub  <b style="color:white;background-color:#880000">bitline</b></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:6402;left:481"><nobr>Figure 8. <b style="color:black;background-color:#99ff99">SRAM</b> configuration with 8 cells</nobr></div>
+<div style="position:absolute;top:6420;left:481"><nobr>combined</nobr></div>
+<div style="position:absolute;top:6480;left:463"><nobr>at V<font style="font-size:9px">dd </font>because of precharging and either sub bit-line</nobr></div>
+<div style="position:absolute;top:6498;left:463"><nobr>or sub bit line will be at V</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:6502;left:653"><nobr>dd <font style="font-size:11px">and other at Gnd, de-</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:6516;left:463"><nobr>pending upon 1 or 0 stored in the cell, charge will be</nobr></div>
+<div style="position:absolute;top:6534;left:463"><nobr>supplied by the bit-line to the sub bit-line which is at</nobr></div>
+<div style="position:absolute;top:6552;left:463"><nobr>Gnd. This will lead to charge sharing between the big</nobr></div>
+<div style="position:absolute;top:6569;left:463"><nobr>capacitance of the bit-line and the small capacitance of</nobr></div>
+<div style="position:absolute;top:6587;left:463"><nobr>sub bit-line and the nal voltage, V</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:6592;left:689"><nobr>final <font style="font-size:11px">, on the bit-line</font></nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:6605;left:463"><nobr>is given by</nobr></div>
+<div style="position:absolute;top:6646;left:501"><nobr>V<font style="font-size:9px">final </font>= V <font style="font-size:9px">dd</font></nobr></div>
+<div style="position:absolute;top:6636;left:627"><nobr>C</nobr></div>
+<div style="position:absolute;top:6656;left:602"><nobr>C + C=15</nobr></div>
+<div style="position:absolute;top:6645;left:671"><nobr>= V <font style="font-size:9px">dd</font></nobr></div>
+<div style="position:absolute;top:6635;left:729"><nobr>15</nobr></div>
+<div style="position:absolute;top:6656;left:729"><nobr>16</nobr></div>
+<div style="position:absolute;top:6646;left:746"><nobr>:</nobr></div>
+<div style="position:absolute;top:6645;left:791"><nobr>(27)</nobr></div>
+<div style="position:absolute;top:6688;left:481"><nobr>Equation (27) shows that a voltage swing of V <font style="font-size:9px">dd</font>/16</nobr></div>
+<div style="position:absolute;top:6706;left:463"><nobr>is obtained on the bit-line. Thus, we can obtain a con-</nobr></div>
+<div style="position:absolute;top:6724;left:463"><nobr>trolled voltage swing on bit-line which will further re-</nobr></div>
+<div style="position:absolute;top:6742;left:463"><nobr>duce the <b style="color:black;background-color:#a0ffff">power</b> consumption.</nobr></div>
+<div style="position:absolute;top:6760;left:481"><nobr>In this approach, there is no need of an extra row</nobr></div>
+<div style="position:absolute;top:6778;left:463"><nobr>and extra column and special circuitry as described in</nobr></div>
+<div style="position:absolute;top:6796;left:463"><nobr>[1] to generate limited swing. This extension uses the</nobr></div>
+<div style="position:absolute;top:6814;left:463"><nobr>charge sharing technique over the <font style="font-size:10px">divided bit-line </font>to de-</nobr></div>
+<div style="position:absolute;top:6831;left:463"><nobr>velop a limited voltage swing with an extra pulse gen-</nobr></div>
+<div style="position:absolute;top:6849;left:463"><nobr>eration circuit, to reduce the <b style="color:black;background-color:#a0ffff">power</b> consumption. This</nobr></div>
+<div style="position:absolute;top:6867;left:463"><nobr>approach reduces the <b style="color:black;background-color:#a0ffff">power</b> consumption by another</nobr></div>
+<div style="position:absolute;top:6885;left:463"><nobr>20 30%. Fig. 10 shows a bar-chart for the extended</nobr></div>
+<div style="position:absolute;top:6903;left:463"><nobr>approach with 8 cells combined together.</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:15px;font-family:Times">
+<div style="position:absolute;top:6921;left:463"><nobr>6 Conclusions</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:11px;font-family:Times">
+<div style="position:absolute;top:6964;left:481"><nobr>In this paper, a novel approach for reducing bit-line</nobr></div>
+<div style="position:absolute;top:6982;left:463"><nobr>capacitance has been presented. Both experimental</nobr></div>
+<div style="position:absolute;top:7000;left:463"><nobr>and theoretical results and a theoretical explanation</nobr></div>
+<div style="position:absolute;top:7018;left:463"><nobr>of the reduction in <b style="color:black;background-color:#a0ffff">power</b> and delay have been pre-</nobr></div>
+<div style="position:absolute;top:7035;left:463"><nobr>sented. This approach shows a considerable improve-</nobr></div>
+<div style="position:absolute;top:7053;left:463"><nobr>ment over the existing standard technique of a single</nobr></div>
+<div style="position:absolute;top:7071;left:463"><nobr>bit-line, both in terms of <b style="color:black;background-color:#a0ffff">power</b> and in terms of speed.</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:15px;font-family:Times">
+<div style="position:absolute;top:7110;left:463"><nobr>References</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:7154;left:472"><nobr>[1] B. S. Amrutur and M. Horowitz.</nobr></div>
+<div style="position:absolute;top:7154;left:699"><nobr>Techniques To</nobr></div>
+<div style="position:absolute;top:7170;left:494"><nobr>Reduce <b style="color:black;background-color:#a0ffff">Power</b> In Fast Wide Memories. 1994 IEEE</nobr></div>
+</span></font>
+
+<div style="position:absolute;top:7303;left:0"><hr><table border="0" width="100%"><tbody><tr><td align="right" bgcolor="eeeeee"><font face="arial,sans-serif"><a name="7"><b>Page 7</b></a></font></td></tr></tbody></table></div><font face="Times" size="3"><span style="font-size:19px;font-family:Times">
+<div style="position:absolute;top:7814;left:291"><nobr>Figure 9. The complete layout of <b style="color:black;background-color:#99ff99">SRAM</b> chip</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:8155;left:210"><nobr>5v</nobr></div>
+<div style="position:absolute;top:8155;left:304"><nobr>3.3v</nobr></div>
+<div style="position:absolute;top:8165;left:239"><nobr><b style="color:black;background-color:#a0ffff">Power</b>  Supply</nobr></div>
+<div style="position:absolute;top:8149;left:152"><nobr>0.0</nobr></div>
+<div style="position:absolute;top:8096;left:152"><nobr>0.5</nobr></div>
+<div style="position:absolute;top:8042;left:152"><nobr>1.0</nobr></div>
+<div style="position:absolute;top:7988;left:152"><nobr>1.5</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:8px;font-family:Times">
+<div style="position:absolute;top:7963;left:169"><nobr>Extension of Divided-Bit Line Approach</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:5px;font-family:Times">
+<div style="position:absolute;top:7980;left:221"><nobr>8 cells combined together</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:4px;font-family:Times">
+<div style="position:absolute;top:8000;left:298"><nobr>Normalized  <b style="color:black;background-color:#a0ffff">Power</b></nobr></div>
+<div style="position:absolute;top:8004;left:298"><nobr>Normalized Delay</nobr></div>
+<div style="position:absolute;top:8008;left:298"><nobr>Normalized <b style="color:black;background-color:#a0ffff">Power</b>-Delay Product</nobr></div>
+</span></font>
+<font face="Times" size="3"><span style="font-size:19px;font-family:Times">
+<div style="position:absolute;top:8207;left:93"><nobr>Figure 10. Experimental Results for Exten-</nobr></div>
+<div style="position:absolute;top:8225;left:93"><nobr>sion of Divided Bit-Line</nobr></div>
+</span></font>
+<font face="Times" size="2"><span style="font-size:9px;font-family:Times">
+<div style="position:absolute;top:7871;left:494"><nobr>Symposium on <b style="color:black;background-color:#ffff66">Low</b> <b style="color:black;background-color:#a0ffff">Power</b> Electronics, pp.92-93, Oct.</nobr></div>
+<div style="position:absolute;top:7888;left:494"><nobr>1994.</nobr></div>
+<div style="position:absolute;top:7902;left:472"><nobr>[2] S. Dutta. VLSI Issues and architectural tradeo s in</nobr></div>
+<div style="position:absolute;top:7919;left:494"><nobr>advanced video signal processors. Phd Thesis, Depart-</nobr></div>
+<div style="position:absolute;top:7935;left:494"><nobr>ment of Electrical Enginnering, Princeton University,</nobr></div>
+<div style="position:absolute;top:7952;left:494"><nobr>Nov. 96, Chapt.4, pp 100-145.</nobr></div>
+<div style="position:absolute;top:7966;left:472"><nobr>[3] J. L. Hennessy and D. A. Patterson. Computer Archi-</nobr></div>
+<div style="position:absolute;top:7983;left:494"><nobr>tecture, A Quantitative Approach. Morgan Kaufmann,</nobr></div>
+<div style="position:absolute;top:7999;left:494"><nobr>San Francisco, CA, 1996.</nobr></div>
+<div style="position:absolute;top:8013;left:472"><nobr>[4] K. Itoh, K. Sasaki, and Y. Nakagome. Trends in <b style="color:black;background-color:#ffff66">Low</b>-</nobr></div>
+<div style="position:absolute;top:8030;left:494"><nobr><b style="color:black;background-color:#a0ffff">Power</b> RAM Circuit Technologies. Proceedings of the</nobr></div>
+<div style="position:absolute;top:8047;left:494"><nobr>IEEE, Vol. 83, No. 4, April 1995.</nobr></div>
+<div style="position:absolute;top:8061;left:472"><nobr>[5] J. Rubinstein et. al. Signal Delay in RC Tree Net-</nobr></div>
+<div style="position:absolute;top:8077;left:494"><nobr>works. IEEE Transactions on Computer-Aided De-</nobr></div>
+<div style="position:absolute;top:8094;left:494"><nobr>sign, Vol. CAD-2, No. 3, pp. 202-211, July 1983.</nobr></div>
+<div style="position:absolute;top:8108;left:472"><nobr>[6] K. Kimura et. al.</nobr></div>
+<div style="position:absolute;top:8108;left:610"><nobr><b style="color:black;background-color:#a0ffff">Power</b> reduction techniques in</nobr></div>
+<div style="position:absolute;top:8125;left:494"><nobr>megabit DRAM’s. IEEE Journal of Solid State Cir-</nobr></div>
+<div style="position:absolute;top:8141;left:494"><nobr>cuits, vol. SC-21, pp. 381-389, June 1986.</nobr></div>
+<div style="position:absolute;top:8156;left:472"><nobr>[7] M. Takada et. al. Reviews and prospects of <b style="color:black;background-color:#99ff99">SRAM</b></nobr></div>
+<div style="position:absolute;top:8172;left:494"><nobr>technology. IEICE Trans., vol. E74, no. 4, pp. 827-</nobr></div>
+<div style="position:absolute;top:8189;left:494"><nobr>838, Apr. 1991.</nobr></div>
+<div style="position:absolute;top:8203;left:472"><nobr>[8] M. Yoshimoto et. al. A divided word line structure</nobr></div>
+<div style="position:absolute;top:8220;left:494"><nobr>in the static RAM and its application to a 64k full</nobr></div>
+<div style="position:absolute;top:8236;left:494"><nobr>CMOS RAM . IEEE Journal of Solid State Circuits,</nobr></div>
+<div style="position:absolute;top:8253;left:494"><nobr>vol. SC-18, pp. 479-485, Oct. 1983.</nobr></div>
+<div style="position:absolute;top:8267;left:472"><nobr>[9] T. Hirose et. al. A 20-ns 4-Mb CMOS <b style="color:black;background-color:#99ff99">SRAM</b> with Hi-</nobr></div>
+<div style="position:absolute;top:8284;left:494"><nobr>erarchical Word Decoding Architecture. IEEE Journal</nobr></div>
+<div style="position:absolute;top:8300;left:494"><nobr>of Solid-State Circuits, Vol. 25, No. 5, Oct. 1990.</nobr></div>
+<div style="position:absolute;top:8315;left:465"><nobr>[10] N. H. E. Weste and K. Eshraghian. Principles of</nobr></div>
+<div style="position:absolute;top:8331;left:494"><nobr>CMOS VLSI Design, A Systems Perspective, 2nd Ed.</nobr></div>
+<div style="position:absolute;top:8347;left:494"><nobr>Addison Wesley, 1993.</nobr></div>
+</span></font>
+
+
+</div></body></html>

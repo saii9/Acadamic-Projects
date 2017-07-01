@@ -1,0 +1,54 @@
+CIRCUIT C:\Users\SUNNY\simulations\Export Microwind\4ttest.MSK
+*
+* IC Technology: CMOS 50nm - 7 Metal
+*
+VDD 1 0 DC 0.50
+Vvinclock 6 0 PULSE(0.50 0.00 1.00N 0.01N 0.00N 1.00N 2.00N)
+Vvoutclock 7 0 PULSE(0.00 0.50 1.00N 0.01N 0.00N 1.00N 2.00N)
+*
+* List of nodes
+* "N4" corresponds to n°4
+* "s2" corresponds to n°5
+* "vinclock" corresponds to n°6
+* "voutclock" corresponds to n°7
+* "s1" corresponds to n°8
+*
+* MOS devices
+MN1 8 10 7 0 N1  W= 0.10U L= 0.05U
+MN2 0 8 5 0 N1  W= 0.10U L= 0.05U
+MP1 4 5 1 1 P1  W= 0.10U L= 0.05U
+MP2 6 11 5 1 P1  W= 0.10U L= 0.05U
+*
+C2 1 0  0.194fF
+C3 1 0  0.128fF
+C4 4 0  0.076fF
+C5 5 0  0.240fF
+C6 6 0  0.079fF
+C7 7 0  0.104fF
+C8 8 0  0.098fF
+C10 10 0  0.048fF
+C11 11 0  0.048fF
+*
+* n-MOS Model 3 :
+* Standard
+.MODEL N1 NMOS LEVEL=3 VTO=0.20 UO=600.000 TOX= 1.8E-9
++LD =0.005U THETA=0.300 GAMMA=0.400
++PHI=0.150 KAPPA=0.010 VMAX=130.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS Model 3:
+* Standard
+.MODEL P1 PMOS LEVEL=3 VTO=-0.20 UO=200.000 TOX= 1.8E-9
++LD =0.005U THETA=0.300 GAMMA=0.400
++PHI=0.150 KAPPA=0.010 VMAX=100.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+.TEMP 27.0
+.TRAN 0.1N 20.00N
+* (Pspice)
+.PROBE
+.END

@@ -1,0 +1,85 @@
+CIRCUIT C:\Users\SUNNY\simulations\Export Microwind\4tsinglecellread.MSK
+*
+* IC Technology: CMOS 50nm - 7 Metal
+*
+VDD 1 0 DC 0.50
+Vblb 6 0 PULSE(0.00 0.50 2.00N 0.00N 0.00N 0.10N 2.10N)
+Vbl 10 0 PULSE(0.50 0.00 2.00N 0.00N 0.00N 0.10N 2.10N)
+Vwlp 13 0 PULSE(0.50 0.00 2.00N 0.00N 0.00N 0.10N)
+Vwln 14 0 PULSE(0.00 0.50 2.00N 0.00N 0.00N 0.10N)
+Vnpre 15 0 PULSE(0.50 0.00 2.00N 0.00N 0.00N 0.10N 2.10N)
+Vstwite 16 0 PULSE(0.00 0.50 2.00N 0.00N 0.00N 0.10N)
+Vppre 17 0 PULSE(0.00 0.50 2.00N 0.00N 0.00N 0.10N 2.10N)
+Vstbwrite 18 0 PULSE(0.50 0.00 2.00N 0.00N 0.00N 0.10N)
+*
+* List of nodes
+* "st" corresponds to n°4
+* "s1" corresponds to n°5
+* "blb" corresponds to n°6
+* "bl" corresponds to n°10
+* "wlp" corresponds to n°13
+* "wln" corresponds to n°14
+* "npre" corresponds to n°15
+* "stwite" corresponds to n°16
+* "ppre" corresponds to n°17
+* "stbwrite" corresponds to n°18
+*
+* MOS devices
+MN1 10 16 0 0 N1  W= 0.10U L= 0.05U
+MN2 0 15 10 0 N1  W= 0.10U L= 0.05U
+MN3 4 14 10 0 N1  W= 0.18U L= 0.05U
+MN4 0 4 5 0 N1  W= 0.10U L= 0.05U
+MP1 4 5 1 1 P1  W= 0.10U L= 0.05U
+MP2 6 13 5 1 P1  W= 0.20U L= 0.05U
+MP3 6 17 1 1 P1  W= 0.10U L= 0.05U
+MP4 1 18 6 1 P1  W= 0.10U L= 0.05U
+*
+C2 1 0  0.559fF
+C3 1 0  0.128fF
+C4 4 0  0.198fF
+C5 5 0  0.222fF
+C6 6 0  0.361fF
+C7 1 0  0.076fF
+C8 1 0  0.076fF
+C10 10 0  0.339fF
+C13 13 0  0.094fF
+C14 14 0  0.105fF
+C15 15 0  0.002fF
+C16 16 0  0.001fF
+C17 17 0  0.002fF
+C18 18 0  0.001fF
+C19 19 0  0.060fF
+C20 20 0  0.060fF
+*
+*
+* n-MOS BSIM4 :
+* Standard
+.MODEL N1 NMOS LEVEL=14 VTO=0.20 U0=0.050 TOX= 1.5E-9 LINT=0.000U 
++K1 =0.450 K2=0.100 DVT0=2.300
++DVT1=0.540 LPE0=23.000e-9 ETA0=0.080
++NFACTOR=  1.6 U0=0.050 UA=3.000e-15
++WINT=0.020U LPE0=23.000e-9 
++KT1=-0.060 UTE=-1.800 VOFF=0.050
++XJ=0.150U NDEP=170.000e15 PCLM=1.100
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS BSIM4:
+* Standard
+.MODEL P1 PMOS LEVEL=14 VTO=-0.20 U0=0.028 TOX= 1.5E-9 LINT=0.000U 
++K1 =0.450 K2=0.100 DVT0=2.300
++DVT1=0.540 LPE0=23.000e-9 ETA0=0.080
++NFACTOR=  1.6 U0=0.028 UA=3.000e-15
++WINT=0.020U LPE0=23.000e-9 
++KT1=-0.060 UTE=-1.800 VOFF=0.050
++XJ=0.150U NDEP=170.000e15 PCLM=0.700
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+.TEMP 27.0
+.TRAN 0.1N 5.00N
+* (Pspice)
+.PROBE
+.END

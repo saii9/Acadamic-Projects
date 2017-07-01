@@ -1,0 +1,85 @@
+CIRCUIT C:\Users\SUNNY\simulations\Export Microwind\final designs\4t\4tnew.MSK
+*
+* IC Technology: CMOS 50nm - 7 Metal
+*
+VDD 1 0 DC 0.50
+VWL2 20 0 PULSE(0.27 0.00 4.00N 0.00N 0.00N 1.00N)
+Vpulse2 21 0 PULSE(0.00 0.50 2.00N 0.00N 0.00N 1.00N)
+VREen 22 0 PULSE(0.00 0.50 4.00N 0.00N 0.00N 1.00N)
+Vdata 23 0 PULSE(0.50 0.00 2.00N 0.00N 0.00N 1.00N)
+VREenbar 25 0 PULSE(0.50 0.00 4.00N 0.00N 0.00N 1.00N)
+Vblbpre 26 0 PULSE(0.00 0.50 4.00N 0.00N 0.00N 1.00N)
+*
+* List of nodes
+* "N2" corresponds to n°2
+* "N3" corresponds to n°3
+* "N6" corresponds to n°6
+* "st" corresponds to n°9
+* "stb" corresponds to n°10
+* "s1" corresponds to n°13
+* "data" corresponds to n°17, WARNING: appears 2 times in the layout
+* "WL2" corresponds to n°20
+* "pulse2" corresponds to n°21
+* "REen" corresponds to n°22
+* "data" corresponds to n°23, WARNING: appears 2 times in the layout
+* "BL" corresponds to n°24
+* "REenbar" corresponds to n°25
+* "blbpre" corresponds to n°26
+*
+* MOS devices
+MN1 17 1 0 0 N1  W= 0.18U L= 0.05U
+MN2 9 21 17 0 N1  W= 0.18U L= 0.05U
+MN3 0 9 10 0 N1  W= 0.10U L= 0.05U
+MN4 12 14 0 0 N1  W= 0.10U L= 0.05U
+MN5 13 22 12 0 N1  W= 0.10U L= 0.05U
+MP1 1 23 6 1 P1  W= 0.15U L= 0.05U
+MP2 9 10 1 1 P1  W= 0.10U L= 0.05U
+MP3 14 20 10 1 P1  W= 0.20U L= 0.05U
+MP4 12 14 1 1 P1  W= 0.10U L= 0.05U
+MP5 13 25 12 1 P1  W= 0.10U L= 0.05U
+MP6 1 26 14 1 P1  W= 0.15U L= 0.05U
+*
+C4 1 0  0.304fF
+C5 1 0  0.154fF
+C6 6 0  0.040fF
+C7 1 0  0.185fF
+C8 1 0  0.066fF
+C9 9 0  0.217fF
+C10 10 0  0.239fF
+C11 1 0  0.086fF
+C12 12 0  0.277fF
+C13 13 0  0.227fF
+C14 14 0  0.294fF
+C15 1 0  0.075fF
+C17 17 0  0.233fF
+C20 20 0  0.139fF
+C21 21 0  0.139fF
+C22 22 0  0.001fF
+C23 23 0  0.001fF
+C24 1 0  0.001fF
+C25 25 0  0.001fF
+C26 26 0  0.001fF
+*
+* n-MOS Model 3 :
+* Standard
+.MODEL N1 NMOS LEVEL=3 VTO=0.20 UO=600.000 TOX= 1.8E-9
++LD =0.005U THETA=0.300 GAMMA=0.400
++PHI=0.150 KAPPA=0.010 VMAX=130.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS Model 3:
+* Standard
+.MODEL P1 PMOS LEVEL=3 VTO=-0.18 UO=200.000 TOX= 1.8E-9
++LD =0.005U THETA=0.300 GAMMA=0.400
++PHI=0.150 KAPPA=0.010 VMAX=100.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+.TEMP 27.0
+.TRAN 0.1N 10.00N
+* (Pspice)
+.PROBE
+.END

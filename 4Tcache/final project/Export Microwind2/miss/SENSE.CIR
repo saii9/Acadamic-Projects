@@ -1,0 +1,53 @@
+CIRCUIT C:\Users\SUNNY\simulations\Export Microwind\SENSE.MSK
+*
+* IC Technology: CMOS 50nm - 7 Metal
+*
+VDD 1 0 DC 0.50
+*
+* List of nodes
+* "data out" corresponds to n°3
+* "N5" corresponds to n°5
+* "N6" corresponds to n°6
+* "dbar" corresponds to n°8
+* "d" corresponds to n°9
+* "sense en" corresponds to n°10
+*
+* MOS devices
+MN1 6 8 3 0 N1  W= 0.20U L= 0.05U
+MN2 0 10 6 0 N1  W= 0.20U L= 0.05U
+MN3 5 9 6 0 N1  W= 0.20U L= 0.05U
+MP1 1 5 3 1 P1  W= 0.10U L= 0.05U
+MP2 5 3 1 1 P1  W= 0.10U L= 0.05U
+*
+C2 1 0  0.125fF
+C3 3 0  0.328fF
+C4 1 0  0.091fF
+C5 5 0  0.266fF
+C6 6 0  0.191fF
+C8 8 0  0.049fF
+C9 9 0  0.050fF
+C10 10 0  0.002fF
+*
+* n-MOS Model 3 :
+* Standard
+.MODEL N1 NMOS LEVEL=3 VTO=0.20 UO=600.000 TOX= 1.8E-9
++LD =0.005U THETA=0.300 GAMMA=0.400
++PHI=0.150 KAPPA=0.010 VMAX=130.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS Model 3:
+* Standard
+.MODEL P1 PMOS LEVEL=3 VTO=-0.20 UO=200.000 TOX= 1.8E-9
++LD =0.005U THETA=0.300 GAMMA=0.400
++PHI=0.150 KAPPA=0.010 VMAX=100.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+.TEMP 27.0
+.TRAN 0.1N 10.00N
+* (Pspice)
+.PROBE
+.END

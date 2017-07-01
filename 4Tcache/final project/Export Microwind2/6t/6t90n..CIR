@@ -1,0 +1,53 @@
+CIRCUIT C:\Users\SUNNY\simulations\Export Microwind\6t90n..MSK
+*
+* IC Technology: CMOS 90nm - 6 Metal
+*
+VDD 1 0 DC 1.00
+Vclock1 6 0 PULSE(0.00 1.00 1.00N 0.01N 0.00N 1.00N 2.00N)
+Vclock2 8 0 PULSE(1.00 0.00 1.00N 0.01N 0.00N 1.00N 2.00N)
+*
+* List of nodes
+* "s2" corresponds to n°3
+* "s1" corresponds to n°5
+* "clock1" corresponds to n°6
+* "clock2" corresponds to n°8
+*
+* MOS devices
+MN1 0 5 3 0 N1  W= 0.45U L= 0.10U
+MN2 3 1 6 0 N1  W= 0.45U L= 0.10U
+MN3 5 3 0 0 N1  W= 0.45U L= 0.10U
+MN4 8 1 5 0 N1  W= 0.45U L= 0.10U
+MP1 1 5 3 1 P1  W= 0.20U L= 0.10U
+MP2 5 3 1 1 P1  W= 0.20U L= 0.10U
+*
+C2 1 0  0.463fF
+C3 3 0  0.653fF
+C4 1 0  0.448fF
+C5 5 0  0.636fF
+C6 6 0  0.447fF
+C8 8 0  0.434fF
+C9 1 0  0.036fF
+*
+* n-MOS Model 3 :
+* low leakage
+.MODEL N1 NMOS LEVEL=3 VTO=0.35 UO=500.000 TOX= 1.8E-9
++LD =0.008U THETA=0.300 GAMMA=0.400
++PHI=0.150 KAPPA=0.200 VMAX=130.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS Model 3:
+* low leakage
+.MODEL P1 PMOS LEVEL=3 VTO=-0.35 UO=200.000 TOX= 1.8E-9
++LD =0.008U THETA=0.300 GAMMA=0.400
++PHI=0.150 KAPPA=0.150 VMAX=100.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+.TEMP 27.0
+.TRAN 0.1N 2.00N
+* (Pspice)
+.PROBE
+.END
