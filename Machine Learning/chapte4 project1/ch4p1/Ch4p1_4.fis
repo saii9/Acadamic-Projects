@@ -1,0 +1,47 @@
+[System]
+Name='Ch4p1_4'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='prod'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='mom'
+
+[Input1]
+Name='rate'
+Range=[-2 2]
+NumMFs=3
+MF1='Positive':'gaussmf',[0.8 2]
+MF2='Zero':'gaussmf',[0.8 0]
+MF3='Negetive':'gaussmf',[0.8 -2]
+
+[Input2]
+Name='error'
+Range=[-1 1]
+NumMFs=3
+MF1='Positive':'trimf',[0 1 2]
+MF2='Negetive':'trimf',[-2 -1 0]
+MF3='Zero':'trimf',[-1 0 1]
+
+[Output1]
+Name='output1'
+Range=[-10 10]
+NumMFs=3
+MF1='Negative':'trapmf',[-19 -11 -9 -1]
+MF2='zero':'trapmf',[-9 -1 1 9]
+MF3='Positive':'trapmf',[1 9 11 19]
+
+[Rules]
+1 1, 3 (1) : 1
+1 3, 3 (1) : 1
+1 2, 2 (1) : 1
+2 1, 3 (1) : 1
+2 3, 2 (1) : 1
+2 2, 1 (1) : 1
+3 1, 2 (1) : 1
+3 2, 1 (1) : 1
+3 3, 1 (1) : 1
