@@ -1,0 +1,10 @@
+[Inputs]
+door
+=row[3:0]=
+=col[2:0]=
+[Outputs]
+=lights[4:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel elock_init
+

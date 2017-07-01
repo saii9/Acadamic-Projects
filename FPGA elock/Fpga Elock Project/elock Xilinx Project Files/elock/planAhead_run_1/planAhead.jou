@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Apr 11 23:05:47 2016
+# Process ID: 8908
+# Log file: C:/Users/Bunny/Desktop/verilog Workspace/elock/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Bunny/Desktop/verilog Workspace/elock/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Bunny/Desktop/verilog Workspace/elock/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin A2 [get_ports {col[2]}]
+endgroup
+startgroup
+set_property package_pin A3 [get_ports {col[1]}]
+endgroup
+startgroup
+set_property package_pin A4 [get_ports {col[0]}]
+endgroup
+startgroup
+set_property package_pin B1 [get_ports {lights[4]}]
+endgroup
+startgroup
+set_property package_pin B2 [get_ports {lights[3]}]
+endgroup
+startgroup
+set_property package_pin B3 [get_ports {lights[2]}]
+endgroup
+startgroup
+set_property package_pin B4 [get_ports {lights[1]}]
+endgroup
+startgroup
+set_property package_pin A5 [get_ports {lights[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {row[0]}]]
+startgroup
+set_property package_pin C1 [get_ports {row[3]}]
+endgroup
+startgroup
+set_property package_pin C2 [get_ports {row[2]}]
+endgroup
+startgroup
+set_property package_pin E1 [get_ports {row[1]}]
+endgroup
+startgroup
+set_property package_pin E20 [get_ports {row[0]}]
+endgroup
+startgroup
+set_property package_pin F1 [get_ports door]
+endgroup
+startgroup
+set_property package_pin A5 [get_ports {lights[0]}]
+endgroup
+report_drc -name drc_1
+set_property iostandard LVCMOS33 [get_ports [list {lights[4]} {lights[3]} {lights[2]} {lights[1]} {lights[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {col[2]}]]
+set_property iostandard LVCMOS33 [get_ports [list {col[1]}]]
+report_drc -name drc_2
+set_property iostandard LVCMOS33 [get_ports [list {col[0]}]]
+undo
+set_property iostandard LVCMOS33 [get_ports [list {col[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {row[3]} {row[2]} {row[1]} {row[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list door]]
+report_drc -name drc_3

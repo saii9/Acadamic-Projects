@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+elock_init instance_name (
+    .door(door), 
+    .row(row), 
+    .col(col), 
+    .lights(lights)
+    );
+
+
